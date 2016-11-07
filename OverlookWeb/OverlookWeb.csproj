@@ -58,10 +58,32 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\idle-video-Ana.mp4" />
+    <Content Include="Assets\idle-video-Bastion.mp4" />
+    <Content Include="Assets\idle-video-Dva.mp4" />
+    <Content Include="Assets\idle-video-Genji.mp4" />
+    <Content Include="Assets\idle-video-Hanzo.mp4" />
+    <Content Include="Assets\idle-video-Junkrat.mp4" />
+    <Content Include="Assets\idle-video-Lucio.mp4" />
+    <Content Include="Assets\idle-video-Mccree.mp4" />
+    <Content Include="Assets\idle-video-Mei.mp4" />
+    <Content Include="Assets\idle-video-Mercy.mp4" />
+    <Content Include="Assets\idle-video-Pharah.mp4" />
+    <Content Include="Assets\idle-video-Reaper.mp4" />
+    <Content Include="Assets\idle-video-Reinhardt.mp4" />
+    <Content Include="Assets\idle-video-Roadhog.mp4" />
+    <Content Include="Assets\idle-video-Soldado.mp4" />
+    <Content Include="Assets\idle-video-Sombra.mp4" />
+    <Content Include="Assets\idle-video-Symmetra.mp4" />
+    <Content Include="Assets\idle-video-Torbjorn.mp4" />
+    <Content Include="Assets\idle-video-Tracer.mp4" />
+    <Content Include="Assets\idle-video-Widowmaker.mp4" />
+    <Content Include="Assets\idle-video-Winston.mp4" />
+    <Content Include="Assets\idle-video-Zarya.mp4" />
+    <Content Include="Assets\idle-video-Zenyatta.mp4" />
     <Content Include="Mapas.aspx" />
     <Content Include="Overlook.Master" />
     <Content Include="big_noodle_titling_oblique.ttf" />
-    <Content Include="Assets\idle-video.webm" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
