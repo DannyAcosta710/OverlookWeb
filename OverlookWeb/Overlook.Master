@@ -25,19 +25,15 @@
             max-height: 100%;
         }
         body{
-            
             font-family:BigNoodle,'Segoe UI',Arial,sans-serif;
             min-height: 99%;
             margin:0;
-            
         }
-
         #menuTop {
             font-size: 35px;
             margin: 15px 0px 20px 0px;
             padding: 0px 0px 10px 0px;
             border-bottom: ridge;
-            
         }
         #menu{
             float: left;
@@ -98,10 +94,7 @@
         }
         #heroesAtributos h1{
             text-align:center;
-            
         }
-
-
     </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -114,8 +107,8 @@
         <aside id="menu">
             <p id="menuTop"><img src="http://i.imgur.com/YZ4w2ey.png" width="15%"/>&nbsp Overlook</p>
             <nav>
-                <h1 class="menuOP"><a href="">HÉROES</a></h1>
-                <h1 class="menuOP"><a href="">MAPAS</a></h1>
+                <h1 class="menuOP"><a href="default.aspx">HÉROES</a></h1>
+                <h1 class="menuOP"><a href="Mapas.aspx">MAPAS</a></h1>
                 <h1 class="menuOP"><a href="">ESTRATEGIAS</a></h1>
                 <h1 class="menuOP"><a href="">NOTICIAS</a></h1>
             </nav>
