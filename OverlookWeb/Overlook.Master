@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Overlook.Master.cs" Inherits="OverlookWeb.defult" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Overlook</title>
+
+    <style>
+        @font-face{
+            font-family: BigNoodle;
+            src: url(big_noodle_titling_oblique.ttf);
+        }
+        header.headMenu{
+            background-color: #FCBD49;
+            width:auto;
+            height:5%;
+            margin:0;
+            text-align:center;
+            font-size:48px;
+            padding:0.55%;
+            }
+        body,html{
+            max-height: 100%;
+        }
+        body{
+            
+            font-family:BigNoodle,'Segoe UI',Arial,sans-serif;
+            min-height: 99%;
+            margin:0;
+            
+        }
+
+        #menuTop {
+            font-size: 35px;
+            margin: 15px 0px 20px 0px;
+            padding: 0px 0px 10px 0px;
+            border-bottom: ridge;
+            
+        }
+        #menu{
+            float: left;
+            width: 15%;
+            text-align: center;
+            padding: 0px 5px 0px 5px;
+            background-color: #FCBD49;
+            min-height:100%;
+            top:0;
+            left:0;
+            position:absolute;
+            border: solid rgb(254, 130, 34) 1.5px;
+        }
+        #menu a:link{
+            color: #f2fafb;
+            font-style:normal;
+            text-decoration:none;
+            font-size: 24px;
+            text-shadow: 2px 0 0 #000,-2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+        }
+        #menu a:visited{
+            color: #f2fafb;
+            font-style:normal;
+            text-decoration:none;
+            font-size: 24px;
+            text-shadow: 2px 0 0 #000,-2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+        }
+        #menu a:hover{
+            color: #f2fafb;
+            font-style:normal;
+            text-decoration:none;
+            font-size: 40px;
+            text-shadow: 2px 0 0 #000,-2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+        }
+        .menuOP{
+            padding: 17px 0px 17px 18px;
+            border: inset 5px;
+            background-color: rgb(33, 34, 38);
+            margin: 0;
+            text-align: left;
+        }
+        #cph{
+            width:84.20%;
+            height:100%;
+            display:block;
+            float:right;
+            margin: 0;
+        }
+        #heroes{
+            clear:both;
+        }
+        #heroesAtributos{
+            width:100%;
+            padding:6.75%;
+            color:black;
+            border:1px solid red;
+            background-color:blue;
+        }
+        #heroesAtributos h1{
+            text-align:center;
+            
+        }
+
+
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+        <aside id="menu">
+            <p id="menuTop"><img src="http://i.imgur.com/YZ4w2ey.png" width="15%"/>&nbsp Overlook</p>
+            <nav>
+                <h1 class="menuOP"><a href="">HÉROES</a></h1>
+                <h1 class="menuOP"><a href="">MAPAS</a></h1>
+                <h1 class="menuOP"><a href="">ESTRATEGIAS</a></h1>
+                <h1 class="menuOP"><a href="">NOTICIAS</a></h1>
+            </nav>
+        </aside>
+        <div id="cph">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
