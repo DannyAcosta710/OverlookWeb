@@ -95,6 +95,7 @@
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Ver_Heroe.aspx" />
+    <Content Include="Ver_Mapas.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
