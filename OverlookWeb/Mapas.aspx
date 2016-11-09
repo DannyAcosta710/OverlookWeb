@@ -22,26 +22,20 @@
         height: 400px;
         width: 150px;
     }
+    #button{
+
+    }
 </style>
    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
       $(function () {
           // run the currently selected effect
-          function runEffect() {
+          function runEffect(datalist) {
 
-
-              // Most effect types need no options passed by default
               var options = {};
-              // some effects have required parameters
-              if ("fade" === "scale") {
-                  options = { percent: 50 };
-              } else if ("fade" === "size") {
-                  options = { to: { width: 280, height: 185 } };
-              }
 
-              // Run the effect
-              $("#effect").show("fade", options, 500, callback);
+              $("#" + datalist).show("fade", options, 500, callback);
           };
 
           //callback function to bring a hidden box back
@@ -52,11 +46,13 @@
           };
 
           // Set effect from select menu value
-          $("#button").on("click", function () {
-              runEffect();
+          $(".Mbutton").on("click", function (e) {
+              e.preventDefault();
+              var datalist = $(this).attr("data-datalistid");
+              runEffect(datalist);
           });
 
-          $("#effect").hide();
+          $("#asaltos, #escoltas, #adsasd").hide();
       });
   </script>
 </asp:Content>
@@ -64,14 +60,15 @@
 
     <div id="total">
         <header class="headMenu">MAPAS</header>
-        <button id="button" class="ui-state-default ui-corner-all">ASALTO</button>
-        <asp:DataList RepeatColumns="3" ID="effect" runat="server"  DataSourceID="AsaltoFuente">
+        <button class="Mbutton" data-datalistid="asaltos" class="ui-state-default ui-corner-all">ASALTO</button>
+        <asp:DataList RepeatColumns="3" ClientIDMode="Static" ID="asaltos" runat="server"  DataSourceID="AsaltoFuente">
             <ItemTemplate>
                 <a href="http://www.pornsfw.com/" ><img class="probamela" src="<%# Eval("Imagen")%>"/></a>
             </ItemTemplate>
         </asp:DataList>
         <h1>ESCOLTA</h1>
-        <asp:DataList RepeatColumns="3" ID="MapasEscolta" runat="server" DataSourceID="EscoltaFuente">
+        <button class="Mbutton" data-datalistid="escoltas" class="ui-state-default ui-corner-all">ASALTO</button>
+        <asp:DataList RepeatColumns="3" ID="escoltas" ClientIDMode="Static" runat="server" DataSourceID="EscoltaFuente">
             <ItemTemplate>
                  <a href="Ver_Mapas.aspx?Mapa="<%# Eval("IdMapa") %> ><img class="probamela" src="<%# Eval("Imagen") %>"/></a>
             </ItemTemplate>

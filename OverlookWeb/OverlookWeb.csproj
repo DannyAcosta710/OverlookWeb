@@ -96,7 +96,7 @@
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Ver_Heroe.aspx" />
-    <Content Include="Ver_Mapas.xml" />
+    <Content Include="ver_mapas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +138,13 @@
     </Compile>
     <Compile Include="Ver_Heroe.aspx.designer.cs">
       <DependentUpon>Ver_Heroe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ver_mapas.aspx.cs">
+      <DependentUpon>ver_mapas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ver_mapas.aspx.designer.cs">
+      <DependentUpon>ver_mapas.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
