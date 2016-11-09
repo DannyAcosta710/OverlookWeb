@@ -13,13 +13,13 @@ namespace OverlookWeb {
     public partial class Mapas {
         
         /// <summary>
-        /// Control MapasAsalto.
+        /// Control effect.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList MapasAsalto;
+        protected global::System.Web.UI.WebControls.DataList effect;
         
         /// <summary>
         /// Control MapasEscolta.
