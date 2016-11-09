@@ -73,7 +73,7 @@
         <h1>ESCOLTA</h1>
         <asp:DataList RepeatColumns="3" ID="MapasEscolta" runat="server" DataSourceID="EscoltaFuente">
             <ItemTemplate>
-                 <a href="http://www.pornsfw.com/" ><img class="probamela" src="<%# Eval("Imagen") %>"/></a>
+                 <a href="Ver_Mapas.aspx?Mapa="<%# Eval("IdMapa") %> ><img class="probamela" src="<%# Eval("Imagen") %>"/></a>
             </ItemTemplate>
         </asp:DataList>
         <h1>CONTROL</h1>
