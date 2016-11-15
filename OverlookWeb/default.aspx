@@ -29,10 +29,7 @@
             background-color: #FCBD49;
         }
         .imagenCss{
-            height:100px;
-        }
-        img{
-            object-fit:cover;
+            height:250px;
         }
     </style>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -58,8 +55,12 @@
           $(".Mbutton").on("click", function (e) {
               e.preventDefault();
               var datalist = $(this).attr("data-datalistid");
-              runEffect(datalist);
+              runEffect(datalist)
+              $(".Mbutton").on("click", function () {
+                  $('#'+datalist).hide();
+              });
           });
+
 
           $("#ataque, #defensa, #tank, #healer").hide();
       });
@@ -70,47 +71,47 @@
         <header class="headMenu">Heroes</header>
         <div id="heroes">
             <div class="atributos">
-                <button class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-attack-large.png" />
+                <button data-datalistid="ataque" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-attack-large.png" />
                 <p>Ataque</p></button>
                 
                 
             </div>
             <div class="atributos">
-                <button class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-defense-large.png" />
+                <button data-datalistid="defensa" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-defense-large.png" />
                 <p>Defensa</p></button>
             </div>
             <div class="atributos">
-                <button class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-tank-large.png" />
+                <button data-datalistid="tank" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-tank-large.png" />
                 <p>Tank</p></button>
             </div>
             <div class="atributos">
-                <button class="Mbutton"><img class="imgAtributo" src="http://www.overwatchgg.com/wp-content/uploads/2016/06/flip-support-large.png" />
+                <button data-datalistid="healer" class="Mbutton"><img class="imgAtributo" src="http://www.overwatchgg.com/wp-content/uploads/2016/06/flip-support-large.png" />
                 <p>Healer</p></button>
             </div>
-            <asp:DataList RepeatColumns="7" ID="ataque" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsAtaque">
+            <asp:DataList RepeatColumns="7"  ClientIDMode="Static" ID="ataque" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsAtaque">
                     <ItemTemplate>
-                        <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
                         <img class="imagenCss" src="<%#Eval ("Imagen") %>" /><br />
+                        <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
                     </ItemTemplate>
             </asp:DataList>
-            <asp:DataList RepeatColumns="6" ID="defensa" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsDefensa">
+            <asp:DataList RepeatColumns="6"  ClientIDMode="Static" ID="defensa" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsDefensa">
                 <ItemTemplate>
-                    <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
                     <img class="imagenCss" src="<%# Eval("Imagen") %>"/><br />
+                    <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
                     <br />
                 </ItemTemplate>
             </asp:DataList>
-            <asp:DataList RepeatColumns="5" ID="tank" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsTank">
+            <asp:DataList RepeatColumns="5"  ClientIDMode="Static" ID="tank" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsTank">
                 <ItemTemplate>
-                    <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
                     <img class="imagenCss" src="<%# Eval("Imagen") %>"/><br />
+                    <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
                     <br />
                 </ItemTemplate>
             </asp:DataList>
-            <asp:DataList RepeatColumns="5" ID="healer" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsHealer">
-                <ItemTemplate>
-                    <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
+            <asp:DataList RepeatColumns="5"  ClientIDMode="Static" ID="healer" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsHealer">
+                <ItemTemplate>                    
                     <img class="imagenCss" src="<%# Eval("Imagen") %>"/><br />
+                    <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
                     <br />
                 </ItemTemplate>
             </asp:DataList>
