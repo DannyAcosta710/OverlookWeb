@@ -25,6 +25,10 @@
     #button{
 
     }
+    .Mbutton {
+        background-color:none;
+        border:none;
+    }
 </style>
    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -45,14 +49,18 @@
               }, 0);
           };
             
+
           // Set effect from select menu value
           $(".Mbutton").on("click", function (e) {
               e.preventDefault();
               var datalist = $(this).attr("data-datalistid");
-              runEffect(datalist);
+              runEffect(datalist)
+              $(".Mbutton").on("click", function () {
+                  $('#' + datalist).hide();
+              });
           });
 
-          $("#asaltos, #escoltas, #adsasd").hide();
+          $("#asaltos, #escoltas, #MapasControl, #MapasHibrido").hide();
       });
   </script>
 </asp:Content>
@@ -60,27 +68,30 @@
 
     <div id="total">
         <header class="headMenu">MAPAS</header>
-        <button class="Mbutton" data-datalistid="asaltos" class="ui-state-default ui-corner-all">ASALTO</button>
+        <h1>ASALTO</h1>
+        <button class="Mbutton" data-datalistid="asaltos" class="ui-state-default ui-corner-all">Asalto</button>
         <asp:DataList RepeatColumns="3" ClientIDMode="Static" ID="asaltos" runat="server"  DataSourceID="AsaltoFuente">
             <ItemTemplate>
-                <a href="http://www.pornsfw.com/" ><img class="probamela" src="<%# Eval("Imagen")%>"/></a>
+                <img class="probamela" src="<%# Eval("Imagen")%>"/>
             </ItemTemplate>
         </asp:DataList>
         <h1>ESCOLTA</h1>
-        <button class="Mbutton" data-datalistid="escoltas" class="ui-state-default ui-corner-all">ASALTO</button>
+        <button class="Mbutton" data-datalistid="escoltas" class="ui-state-default ui-corner-all">Escoltas</button>
         <asp:DataList RepeatColumns="3" ID="escoltas" ClientIDMode="Static" runat="server" DataSourceID="EscoltaFuente">
             <ItemTemplate>
-                 <a href="Ver_Mapas.aspx?Mapa="<%# Eval("IdMapa") %> ><img class="probamela" src="<%# Eval("Imagen") %>"/></a>
+                 <%--<a href="Ver_Mapas.aspx?Mapa=<%# Eval("IdMapa") %>" >--%><img class="probamela" src="<%# Eval("Imagen") %>"/>
             </ItemTemplate>
         </asp:DataList>
         <h1>CONTROL</h1>
-        <asp:DataList RepeatColumns="3" ID="MapasControl" runat="server" DataSourceID="ControlFuente">
+        <button class="Mbutton" data-datalistid="MapasControl" class="ui-state-default ui-corner-all">Control</button>
+        <asp:DataList RepeatColumns="3" ClientIDMode="Static" ID="MapasControl" runat="server" DataSourceID="ControlFuente">
             <ItemTemplate>
                 <a href="http://www.pornsfw.com/" ><img class="probamela" src="<%# Eval("Imagen") %>" /></a> 
             </ItemTemplate>
         </asp:DataList>
         <h1>ASALTO/ESCOLTA</h1>
-        <asp:DataList RepeatColumns="4" ID="MapasHibrido" runat="server" DataSourceID="HibridoFuente">
+        <button class="Mbutton" data-datalistid="MapasHibrido" class="ui-state-default ui-corner-all">Hibrido</button>
+        <asp:DataList RepeatColumns="4" ClientIDMode="Static" ID="MapasHibrido" runat="server" DataSourceID="HibridoFuente">
             <ItemTemplate>
                  <a href="http://www.pornsfw.com/" ><img class="probamela" src="<%# Eval("Imagen") %>"/></a>
             </ItemTemplate>
