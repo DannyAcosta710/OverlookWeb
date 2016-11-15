@@ -64,6 +64,8 @@
 
           $("#ataque, #defensa, #tank, #healer").hide();
       });
+
+
   </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -90,27 +92,27 @@
             </div>
             <asp:DataList RepeatColumns="7"  ClientIDMode="Static" ID="ataque" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsAtaque">
                     <ItemTemplate>
-                        <img class="imagenCss" src="<%#Eval ("Imagen") %>" /><br />
+                        <a href=""><img class="imagenCss" src="<%#Eval ("Imagen") %>" /></a><br />
                         <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
                     </ItemTemplate>
             </asp:DataList>
             <asp:DataList RepeatColumns="6"  ClientIDMode="Static" ID="defensa" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsDefensa">
                 <ItemTemplate>
-                    <img class="imagenCss" src="<%# Eval("Imagen") %>"/><br />
+                    <a href="Ver_Heroe.aspx?id=<%#Eval("ID_Heroe") %>"><img class="imagenCss" src="<%# Eval("Imagen") %>"/></a><br />
                     <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
                     <br />
                 </ItemTemplate>
             </asp:DataList>
             <asp:DataList RepeatColumns="5"  ClientIDMode="Static" ID="tank" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsTank">
                 <ItemTemplate>
-                    <img class="imagenCss" src="<%# Eval("Imagen") %>"/><br />
+                    <a href=""><img class="imagenCss" src="<%# Eval("Imagen") %>"/></a><br />
                     <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
                     <br />
                 </ItemTemplate>
             </asp:DataList>
             <asp:DataList RepeatColumns="5"  ClientIDMode="Static" ID="healer" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsHealer">
                 <ItemTemplate>                    
-                    <img class="imagenCss" src="<%# Eval("Imagen") %>"/><br />
+                    <a href=""><img class="imagenCss" src="<%# Eval("Imagen") %>"/></a><br />
                     <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
                     <br />
                 </ItemTemplate>
