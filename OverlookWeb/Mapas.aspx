@@ -44,7 +44,7 @@
                   $("#effect:visible")
               }, 0);
           };
-
+            
           // Set effect from select menu value
           $(".Mbutton").on("click", function (e) {
               e.preventDefault();
