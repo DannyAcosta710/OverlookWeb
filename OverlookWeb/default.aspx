@@ -1,4 +1,4 @@
-﻿<%@ Page Title="dsdsxs" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="OverlookWeb._default" %>
+﻿<%@ Page Title="Overlook - Héroes" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="OverlookWeb._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    
     <style>
@@ -7,11 +7,11 @@
             background-size: 152vh 100vh;
             background-repeat:no-repeat;
             min-width:100vh;
-            min-height:100vh;
+            height:98vh;
         }
         #heroes{
             min-width:100vh;
-            min-height:100vh;
+            min-height:80vh;
         }
         .imgAtributo{
             width:100px;
