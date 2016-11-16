@@ -32,7 +32,7 @@
             height:250px;
         }
         .contenidoHeroes{
-            float:left;
+            display:block;
             text-align:center;
             margin:0 auto;
         }
