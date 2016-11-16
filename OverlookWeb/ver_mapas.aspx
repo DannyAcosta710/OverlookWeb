@@ -4,11 +4,29 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <header class="headMenu"><%#Eval("Mapa") %></header>
-    <div id="Total">
+    <header class="headMenu">MAPAS</header>
 
-    </div>
+    <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID_Mapa" DataSourceID="MapasSource">
+        <ItemTemplate>
+            ID_Mapa:
+            <asp:Label Text='<%# Eval("ID_Mapa") %>' runat="server" ID="ID_MapaLabel" /><br />
+            Nombre:
+            <asp:Label Text='<%# Bind("Nombre") %>' runat="server" ID="NombreLabel" /><br />
+            Descripcion:
+            <asp:Label Text='<%# Bind("Descripcion") %>' runat="server" ID="DescripcionLabel" /><br />
+            Tipo:
+            <asp:Label Text='<%# Bind("Tipo") %>' runat="server" ID="TipoLabel" /><br />
+            Imagen:
+            <asp:Label Text='<%# Bind("Imagen") %>' runat="server" ID="ImagenLabel" /><br />
 
+        </ItemTemplate>
+    </asp:FormView>
+
+    <asp:SqlDataSource ID="MapasSource" runat="server" ConnectionString='<%$ ConnectionStrings:MapasSource %>' SelectCommand="SELECT * FROM [Mapa] WHERE ([ID_Mapa] = @ID_Mapa)">
+        <SelectParameters>
+            <asp:QueryStringParameter QueryStringField="MID" Name="ID_Mapa" Type="Int32"></asp:QueryStringParameter>
+        </SelectParameters>
+    </asp:SqlDataSource>
 
 
 </asp:Content>

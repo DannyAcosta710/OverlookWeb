@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="Mapas.aspx.cs" Inherits="OverlookWeb.Mapas" %>
+﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="Mapas.aspx.cs" Inherits="OverlookWeb.Mapas" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
@@ -15,7 +15,7 @@
     }
     #total > h1,h2{
         color: white;
-        font-size: 42px;vb
+        font-size: 42px;
     }
     .probamela{
         object-fit: cover;
@@ -52,6 +52,7 @@
 
           // Set effect from select menu value
           $(".Mbutton").on("click", function (e) {
+              
               e.preventDefault();
               var datalist = $(this).attr("data-datalistid");
               runEffect(datalist)
@@ -69,53 +70,59 @@
     <div id="total">
         <header class="headMenu">MAPAS</header>
         <h1>ASALTO</h1>
-        <button class="Mbutton" data-datalistid="asaltos" class="ui-state-default ui-corner-all">Asalto</button>
+        <button class="Mbutton" data-datalistid="asaltos" >Asalto</button>
         <asp:DataList RepeatColumns="3" ClientIDMode="Static" ID="asaltos" runat="server"  DataSourceID="AsaltoFuente">
             <ItemTemplate>
-                <img class="probamela" src="<%# Eval("Imagen")%>"/>
+                <a href="ver_mapas.aspx?MID=<%#Eval ("ID_Mapa")%>"><img class="probamela" src="<%# Eval("Imagen")%>"/></a>
             </ItemTemplate>
         </asp:DataList>
         <h1>ESCOLTA</h1>
-        <button class="Mbutton" data-datalistid="escoltas" class="ui-state-default ui-corner-all">Escoltas</button>
+        <button class="Mbutton" data-datalistid="escoltas" >Escoltas</button>
         <asp:DataList RepeatColumns="3" ID="escoltas" ClientIDMode="Static" runat="server" DataSourceID="EscoltaFuente">
             <ItemTemplate>
-                 <%--<a href="Ver_Mapas.aspx?Mapa=<%# Eval("IdMapa") %>" >--%><img class="probamela" src="<%# Eval("Imagen") %>"/>
+                 <a href="ver_mapas.aspx?MID=<%# Eval("ID_Mapa") %>"> <img class="probamela" src="<%# Eval("Imagen") %>"/> </a>
             </ItemTemplate>
         </asp:DataList>
         <h1>CONTROL</h1>
-        <button class="Mbutton" data-datalistid="MapasControl" class="ui-state-default ui-corner-all">Control</button>
+        <button class="Mbutton" data-datalistid="MapasControl" >Control</button>
         <asp:DataList RepeatColumns="3" ClientIDMode="Static" ID="MapasControl" runat="server" DataSourceID="ControlFuente">
             <ItemTemplate>
-                <a href="http://www.pornsfw.com/" ><img class="probamela" src="<%# Eval("Imagen") %>" /></a> 
+                <a href="ver_mapas.aspx?MID=<%#Eval ("ID_Mapa")%>" ><img class="probamela" src="<%# Eval("Imagen") %>" /></a> 
             </ItemTemplate>
         </asp:DataList>
         <h1>ASALTO/ESCOLTA</h1>
-        <button class="Mbutton" data-datalistid="MapasHibrido" class="ui-state-default ui-corner-all">Hibrido</button>
+        <button class="Mbutton" data-datalistid="MapasHibrido" >Hibrido</button>
         <asp:DataList RepeatColumns="4" ClientIDMode="Static" ID="MapasHibrido" runat="server" DataSourceID="HibridoFuente">
             <ItemTemplate>
-                 <a href="http://www.pornsfw.com/" ><img class="probamela" src="<%# Eval("Imagen") %>"/></a>
+                 <a href="ver_mapas.aspx?MID=<%#Eval ("ID_Mapa")%>"><img class="probamela" src="<%# Eval("Imagen") %>"/></a>
             </ItemTemplate>
         </asp:DataList>
     </div>
 
-    <asp:SqlDataSource ID="AsaltoFuente" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT [Nombre], [Tipo], [Imagen] FROM [Mapa] WHERE ([Tipo] = @Tipo)">
+    <asp:SqlDataSource ID="AsaltoFuente" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT * FROM [Mapa] WHERE ([Tipo] = @Tipo)">
         <SelectParameters>
             <asp:Parameter DefaultValue="Asalto" Name="Tipo" Type="String"></asp:Parameter>
         </SelectParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="EscoltaFuente" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT [Nombre], [Tipo], [Imagen] FROM [Mapa] WHERE ([Tipo] = @Tipo)">
+    <asp:SqlDataSource ID="EscoltaFuente" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT * FROM [Mapa] WHERE ([Tipo] = @Tipo)">
         <SelectParameters>
             <asp:Parameter DefaultValue="Escolta" Name="Tipo" Type="String"></asp:Parameter>
+
+
         </SelectParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="ControlFuente" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT [Nombre], [Tipo], [Imagen] FROM [Mapa] WHERE ([Tipo] = @Tipo)">
+    <asp:SqlDataSource ID="ControlFuente" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT * FROM [Mapa] WHERE ([Tipo] = @Tipo)">
         <SelectParameters>
             <asp:Parameter DefaultValue="Control" Name="Tipo" Type="String"></asp:Parameter>
+
+
         </SelectParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="HibridoFuente" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT [Imagen], [Tipo], [Nombre] FROM [Mapa] WHERE ([Tipo] = @Tipo)">
+    <asp:SqlDataSource ID="HibridoFuente" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT * FROM [Mapa] WHERE ([Tipo] = @Tipo)">
         <SelectParameters>
             <asp:Parameter DefaultValue="Asalto/Escolta" Name="Tipo" Type="String"></asp:Parameter>
+
+
         </SelectParameters>
     </asp:SqlDataSource>
 
