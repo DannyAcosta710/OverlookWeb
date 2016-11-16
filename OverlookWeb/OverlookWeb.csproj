@@ -83,6 +83,7 @@
     <Content Include="Assets\idle-video-Zenyatta.mp4" />
     <Content Include="Estrategias.aspx" />
     <Content Include="Mapas.aspx" />
+    <Content Include="NoticiasOverlook.aspx" />
     <Content Include="Overlook.Master" />
     <Content Include="big_noodle_titling_oblique.ttf" />
     <None Include="Web.Debug.config">
@@ -95,6 +96,7 @@
   <ItemGroup>
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="VerNoticiasOverlook.aspx" />
     <Content Include="Ver_Heroe.aspx" />
     <Content Include="ver_mapas.aspx" />
     <Content Include="Web.config" />
@@ -121,6 +123,13 @@
     <Compile Include="Mapas.aspx.designer.cs">
       <DependentUpon>Mapas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NoticiasOverlook.aspx.cs">
+      <DependentUpon>NoticiasOverlook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoticiasOverlook.aspx.designer.cs">
+      <DependentUpon>NoticiasOverlook.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Overlook.Master.cs">
       <DependentUpon>Overlook.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -132,6 +141,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VerNoticiasOverlook.aspx.cs">
+      <DependentUpon>VerNoticiasOverlook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerNoticiasOverlook.aspx.designer.cs">
+      <DependentUpon>VerNoticiasOverlook.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Ver_Heroe.aspx.cs">
       <DependentUpon>Ver_Heroe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
