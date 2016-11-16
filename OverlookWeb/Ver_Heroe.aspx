@@ -52,7 +52,7 @@
                 <p>Aqui van los counters xdxdxd</p>
                 <h2>Eficaz contra </h2>
                 <p>Aqui van los eficazes xdxd</p>
-                <h2>Rol <img width="30px" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-defense-large.png" /></h2>
+                <h2>Rol</h2>
                 <p><%# Eval("Rol") %></p>
             </div>
 
