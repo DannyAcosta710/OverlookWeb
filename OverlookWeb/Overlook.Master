@@ -23,6 +23,7 @@
             }
         body{
             font-family:BigNoodle,'Segoe UI',Arial,sans-serif;
+            max-height:98vh;
             margin:0 auto;
         }
 
@@ -43,7 +44,6 @@
         }
         #cph{
             width:84.3%;
-            height:100%;
             display:block;
             float:right;
             margin: 0 auto;
