@@ -92,7 +92,6 @@
             
         }
         #cph{
-
             height:49em;
         }
 
@@ -106,7 +105,7 @@
 
 
         <aside id="menu">
-            <p id="menuTop"><img src="http://i.imgur.com/YZ4w2ey.png" width="15%"/>&nbsp Overlook</p>
+            <a href="default.aspx"><p id="menuTop"><img src="http://i.imgur.com/YZ4w2ey.png" width="15%"/>&nbsp Overlook</p></a>
             <nav>
                 <h1 class="menuOP"><a href="default.aspx">HÉROES</a></h1>
                 <h1 class="menuOP"><a href="Mapas.aspx">MAPAS</a></h1>

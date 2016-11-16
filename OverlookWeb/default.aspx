@@ -31,6 +31,11 @@
         .imagenCss{
             height:250px;
         }
+        .contenidoHeroes{
+            float:left;
+            text-align:center;
+            margin:0 auto;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -75,8 +80,6 @@
             <div class="atributos">
                 <button data-datalistid="ataque" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-attack-large.png" />
                 <p>Ataque</p></button>
-                
-                
             </div>
             <div class="atributos">
                 <button data-datalistid="defensa" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-defense-large.png" />
@@ -90,34 +93,35 @@
                 <button data-datalistid="healer" class="Mbutton"><img class="imgAtributo" src="http://www.overwatchgg.com/wp-content/uploads/2016/06/flip-support-large.png" />
                 <p>Healer</p></button>
             </div>
+            <div class="contenidoHeroes">
             <asp:DataList RepeatColumns="7"  ClientIDMode="Static" ID="ataque" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsAtaque">
                     <ItemTemplate>
                         <a href="Ver_Heroe.aspx?id=<%#Eval("ID_Heroe") %>"><img class="imagenCss" src="<%#Eval ("Imagen") %>" /></a><br />
-                        <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
+                        <p><%# Eval("Nombre") %></p><br />
                     </ItemTemplate>
             </asp:DataList>
             <asp:DataList RepeatColumns="6"  ClientIDMode="Static" ID="defensa" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsDefensa">
                 <ItemTemplate>
                     <a href="Ver_Heroe.aspx?id=<%#Eval("ID_Heroe") %>"><img class="imagenCss" src="<%# Eval("Imagen") %>"/></a><br />
-                    <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
+                    <p><%# Eval("Nombre") %></p><br />
                     <br />
                 </ItemTemplate>
             </asp:DataList>
             <asp:DataList RepeatColumns="5"  ClientIDMode="Static" ID="tank" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsTank">
                 <ItemTemplate>
                     <a href="Ver_Heroe.aspx?id=<%#Eval("ID_Heroe") %>"><img class="imagenCss" src="<%# Eval("Imagen") %>"/></a><br />
-                    <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
+                    <p><%# Eval("Nombre") %></p><br />
                     <br />
                 </ItemTemplate>
             </asp:DataList>
             <asp:DataList RepeatColumns="5"  ClientIDMode="Static" ID="healer" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsHealer">
                 <ItemTemplate>                    
                     <a href="Ver_Heroe.aspx?id=<%#Eval("ID_Heroe") %>"><img class="imagenCss" src="<%# Eval("Imagen") %>"/></a><br />
-                    <asp:Label Text='<%# Eval("Nombre") %>' runat="server" ID="NombreLabel" /><br />
+                    <p><%# Eval("Nombre") %></p><br />
                     <br />
                 </ItemTemplate>
             </asp:DataList>
-
+            </div>
 
             <asp:SqlDataSource runat="server" ID="sdsHealer" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT [ID_Heroe], [Nombre], [Rol], [Imagen] FROM [Heroe] WHERE ([Rol] = @Rol)">
                 <SelectParameters>
