@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="ver_mapas.aspx.cs" Inherits="OverlookWeb.ver_mapas" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 
 
@@ -7,18 +8,22 @@
 
     <header class="headMenu">MAPAS</header>
 
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID_Mapa" DataSourceID="MapasSource">
+    <asp:FormView CssClass="Form" ID="FormView1" runat="server" DataKeyNames="ID_Mapa" DataSourceID="MapasSource">
         <ItemTemplate>
-            ID_Mapa:
-            <asp:Label Text='<%# Eval("ID_Mapa") %>' runat="server" ID="ID_MapaLabel" /><br />
-            Nombre:
-            <asp:Label Text='<%# Bind("Nombre") %>' runat="server" ID="NombreLabel" /><br />
-            Descripcion:
-            <asp:Label Text='<%# Bind("Descripcion") %>' runat="server" ID="DescripcionLabel" /><br />
-            Tipo:
-            <asp:Label Text='<%# Bind("Tipo") %>' runat="server" ID="TipoLabel" /><br />
-            Imagen:
-            <asp:Label Text='<%# Bind("Imagen") %>' runat="server" ID="ImagenLabel" /><br />
+           <style>
+                .Form {
+                 background-image:url("<%# Eval("Imagen") %>");
+                }
+            </style>
+            <div id="centro">
+                <h1><%#Eval("Nombre") %></h1>
+                Descripcion:
+                <asp:Label Text='<%# Bind("Descripcion") %>' runat="server" ID="DescripcionLabel" /><br />
+                Tipo:
+                <asp:Label Text='<%# Bind("Tipo") %>' runat="server" ID="TipoLabel" /><br />
+                Imagen:
+                <asp:Label Text='<%# Bind("Imagen") %>' runat="server" ID="ImagenLabel" /><br />
+            </div>
         </ItemTemplate>
     </asp:FormView>
 

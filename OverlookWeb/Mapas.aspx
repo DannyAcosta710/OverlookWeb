@@ -26,8 +26,13 @@
 
     }
     .Mbutton {
-        background-color:none;
+        background-color:black;
         border:none;
+        color:white;
+        padding: 5px;
+        font-weight:bold;
+        font-size:50px;
+        font-style:italic;
     }
 </style>
    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
