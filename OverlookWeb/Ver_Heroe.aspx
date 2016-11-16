@@ -14,6 +14,7 @@
             position:absolute;
             margin-left:20px;
             width:40%;
+            font-family:'Segoe UI';
         }
         #contenidoHeroe > h1{
             font-size:50px;
