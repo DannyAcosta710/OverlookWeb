@@ -4,7 +4,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<<<<<<< HEAD
+
     <header class="headMenu">MAPAS</header>
 
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID_Mapa" DataSourceID="MapasSource">
@@ -19,13 +19,6 @@
             <asp:Label Text='<%# Bind("Tipo") %>' runat="server" ID="TipoLabel" /><br />
             Imagen:
             <asp:Label Text='<%# Bind("Imagen") %>' runat="server" ID="ImagenLabel" /><br />
-=======
-    <header class="headMenu"><%#Eval("Mapa") %></header>
-    <div id="Total">
- 
-    </div>
->>>>>>> origin/master
-
         </ItemTemplate>
     </asp:FormView>
 
