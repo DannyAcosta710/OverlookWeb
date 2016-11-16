@@ -36,6 +36,13 @@
             text-align:center;
             margin:0 auto;
         }
+        .izi{
+            margin:0 auto;
+
+        }
+        .izi td{
+            text-align:center;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -93,6 +100,7 @@
                 <button data-datalistid="healer" class="Mbutton"><img class="imgAtributo" src="http://www.overwatchgg.com/wp-content/uploads/2016/06/flip-support-large.png" />
                 <p>Healer</p></button>
             </div>
+
             <div class="contenidoHeroes">
             <asp:DataList RepeatColumns="7"  ClientIDMode="Static" ID="ataque" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsAtaque">
                     <ItemTemplate>
@@ -100,21 +108,21 @@
                         <p><%# Eval("Nombre") %></p><br />
                     </ItemTemplate>
             </asp:DataList>
-            <asp:DataList RepeatColumns="6"  ClientIDMode="Static" ID="defensa" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsDefensa">
+            <asp:DataList RepeatColumns="6" CssClass="izi" ClientIDMode="Static" ID="defensa" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsDefensa">
                 <ItemTemplate>
                     <a href="Ver_Heroe.aspx?id=<%#Eval("ID_Heroe") %>"><img class="imagenCss" src="<%# Eval("Imagen") %>"/></a><br />
                     <p><%# Eval("Nombre") %></p><br />
                     <br />
                 </ItemTemplate>
             </asp:DataList>
-            <asp:DataList RepeatColumns="5"  ClientIDMode="Static" ID="tank" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsTank">
+            <asp:DataList RepeatColumns="5"  CssClass="izi"  ClientIDMode="Static" ID="tank" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsTank">
                 <ItemTemplate>
                     <a href="Ver_Heroe.aspx?id=<%#Eval("ID_Heroe") %>"><img class="imagenCss" src="<%# Eval("Imagen") %>"/></a><br />
                     <p><%# Eval("Nombre") %></p><br />
                     <br />
                 </ItemTemplate>
             </asp:DataList>
-            <asp:DataList RepeatColumns="5"  ClientIDMode="Static" ID="healer" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsHealer">
+            <asp:DataList RepeatColumns="5" CssClass="izi" ClientIDMode="Static" ID="healer" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsHealer">
                 <ItemTemplate>                    
                     <a href="Ver_Heroe.aspx?id=<%#Eval("ID_Heroe") %>"><img class="imagenCss" src="<%# Eval("Imagen") %>"/></a><br />
                     <p><%# Eval("Nombre") %></p><br />
