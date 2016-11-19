@@ -14,7 +14,7 @@
         }
         header.headMenu{
             background-color: #FCBD49;
-            width:100%;
+            width:auto;
             height:1em;
             margin:0;
             text-align:center;
@@ -32,21 +32,39 @@
             margin: 15px 0px 20px 0px;
             padding: 0px 0px 10px 0px;
         }
+     /* .container { 
+          display: table;
+        }
+        .content { 
+          display: table-row; 
+          height: 100%; 
+        }
+        .content-body { 
+          display: table-cell;
+        } */
         #menu{
+            display:table-row;
+            height:99.8%;
             float: left;
             width: 15%;
             text-align: center;
             padding: 0px 5px 0px 5px;
             background-color: #FCBD49;
-            height:100%;
+            /*height:100%;*/
             position:absolute;
             /*border: solid rgb(254, 130, 34) 1.5px; legacy*/
         }
         #cph{
-            width:84.3%;
+            min-width:84.5%;
+            max-width:84.5%;
             display:block;
             float:right;
             margin: 0 auto;
+            min-height:99.8%;
+            max-height:99.8%;
+            position:absolute;
+            margin-left:15.5%;
+            overflow:auto;
         }
         #menu a:link{
             color: #f2fafb;
@@ -91,9 +109,6 @@
             text-align:center;
             
         }
-        #cph{
-            height:49em;
-        }
 
     </style>
 
@@ -102,8 +117,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
-
         <aside id="menu">
             <a href="default.aspx"><p id="menuTop"><img src="http://i.imgur.com/YZ4w2ey.png" width="15%"/>&nbsp Overlook</p></a>
             <nav>

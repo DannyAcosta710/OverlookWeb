@@ -2,16 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    
     <style>
-        #contenedorDefault{
+        #cph{
             background-image: url(http://www.hdwallpaper.nu/wp-content/uploads/2016/05/u7GYupt.png );
             background-size: 152vh 100vh;
             background-repeat:no-repeat;
-            min-width:100vh;
-            height:98vh;
-        }
-        #heroes{
-            min-width:100vh;
-            min-height:80vh;
         }
         .imgAtributo{
             width:100px;
@@ -81,9 +75,7 @@
   </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div id="contenedorDefault">
         <header class="headMenu">Heroes</header>
-        <div id="heroes">
             <div class="atributos">
                 <button data-datalistid="ataque" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-attack-large.png" />
                 <p>Ataque</p></button>
@@ -151,6 +143,4 @@
                         <asp:QueryStringParameter QueryStringField="Rol" DefaultValue="Ataque" Name="Rol" Type="String"></asp:QueryStringParameter>
                     </SelectParameters>
                 </asp:SqlDataSource>
-        </div>
-    </div>
 </asp:Content>
