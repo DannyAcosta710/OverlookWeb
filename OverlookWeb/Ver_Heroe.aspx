@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="Ver_Heroe.aspx.cs" Inherits="OverlookWeb.Ver_Heroe" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-         header{
+        header{
             background-color: #FCBD49;
             width:auto;
             height:5%;
@@ -9,8 +9,8 @@
             text-align:center;
             font-size:48px;
             padding:0.55%;
-            }
-         #contenidoHeroe{
+        }
+        #contenidoHeroe{
             position:absolute;
             margin-left:20px;
             width:40%;
