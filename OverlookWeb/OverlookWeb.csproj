@@ -96,6 +96,7 @@
   <ItemGroup>
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="ProContraHeroes.xml" />
     <Content Include="VerNoticiasOverlook.aspx" />
     <Content Include="Ver_Heroe.aspx" />
     <Content Include="ver_mapas.aspx" />
