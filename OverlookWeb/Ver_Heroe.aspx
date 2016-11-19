@@ -9,14 +9,12 @@
             text-align:center;
             font-size:48px;
             padding:0.55%;
-<<<<<<< HEAD
         }
         #contenidoHeroe{
             position:absolute;
             margin-left:20px;
             width:40%;
             font-family:'Segoe UI';
-=======
             }
         #contenidoHeroe {
             position: absolute;
@@ -28,7 +26,6 @@
             float:right;
             width:100%;
             overflow:scroll;
->>>>>>> origin/master
         }
         #contenidoHeroe > h1{
             font-size:50px;
@@ -44,7 +41,6 @@
             height: 100%;
             display: block;
             float: right;
-            
         }
     </style>
 </asp:Content>
