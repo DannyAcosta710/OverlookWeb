@@ -5,16 +5,17 @@
 <link rel="stylesheet" href="/resources/demos/style.css"/>
 <style>
     #total{
-        background-image: url("http://media.idownloadblog.com/wp-content/uploads/2016/05/Plus-Slate-By-Jason-Zigrino-2.png");
         min-width: 100vh;
         min-height: 100vh;
         margin:0;
+        margin-left:1.5%;
+        text-align:center
     }
-    body{
-        
+    #cph{
+        background-image: url("/Assets/asanoha-400px.png");
     }
     #total > h1,h2{
-        color: white;
+        color: black;
         font-size: 42px;
     }
     .probamela{
@@ -22,11 +23,13 @@
         height: 400px;
         width: 150px;
     }
-    #button{
-
+    button{
+        width:15%;
+        margin: 0 auto;
     }
     .Mbutton {
         background-color:black;
+        font-family:BigNoodleTitling;
         border:none;
         color:white;
         padding: 5px;
@@ -72,30 +75,31 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div id="total">
+    
         <header class="headMenu">MAPAS</header>
-        <h1>ASALTO</h1>
+    <div id="total">
+        <br />
         <button class="Mbutton" data-datalistid="asaltos" >Asalto</button>
         <asp:DataList RepeatColumns="3" ClientIDMode="Static" ID="asaltos" runat="server"  DataSourceID="AsaltoFuente">
             <ItemTemplate>
                 <a href="ver_mapas.aspx?MID=<%#Eval ("ID_Mapa")%>"><img class="probamela" src="<%# Eval("Imagen")%>"/></a>
             </ItemTemplate>
         </asp:DataList>
-        <h1>ESCOLTA</h1>
-        <button class="Mbutton" data-datalistid="escoltas" >Escoltas</button>
+        <br /><br />
+        <button class="Mbutton" data-datalistid="escoltas" >Escolta</button>
         <asp:DataList RepeatColumns="3" ID="escoltas" ClientIDMode="Static" runat="server" DataSourceID="EscoltaFuente">
             <ItemTemplate>
                  <a href="ver_mapas.aspx?MID=<%# Eval("ID_Mapa") %>"> <img class="probamela" src="<%# Eval("Imagen") %>"/> </a>
             </ItemTemplate>
         </asp:DataList>
-        <h1>CONTROL</h1>
+        <br /><br />
         <button class="Mbutton" data-datalistid="MapasControl" >Control</button>
         <asp:DataList RepeatColumns="3" ClientIDMode="Static" ID="MapasControl" runat="server" DataSourceID="ControlFuente">
             <ItemTemplate>
                 <a href="ver_mapas.aspx?MID=<%#Eval ("ID_Mapa")%>" ><img class="probamela" src="<%# Eval("Imagen") %>" /></a> 
             </ItemTemplate>
         </asp:DataList>
-        <h1>ASALTO/ESCOLTA</h1>
+        <br /><br />
         <button class="Mbutton" data-datalistid="MapasHibrido" >Hibrido</button>
         <asp:DataList RepeatColumns="4" ClientIDMode="Static" ID="MapasHibrido" runat="server" DataSourceID="HibridoFuente">
             <ItemTemplate>
