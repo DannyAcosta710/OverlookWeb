@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:DataList ID="DataList1" runat="server" DataSourceID="VNO">
+    <asp:DataList ID="DataList1" runat="server" DataSourceID="NVO">
 
         <ItemTemplate>
             Titulo:
@@ -19,9 +19,10 @@
             <a href="<%# Eval("Fuente") %>"/>AQUI</a>
         </ItemTemplate>
     </asp:DataList>
-    <asp:SqlDataSource runat="server" ID="VNO" ConnectionString='<%$ ConnectionStrings:OverlookConnectionStringY %>' SelectCommand="SELECT DISTINCT [Titulo], [Imagen], [Descripcion], [Fecha], [Autor], [Fuente] FROM [Noticia] WHERE ([ID_Noticia] = @ID_Noticia)">
+
+    <asp:SqlDataSource runat="server" ID="NVO" ConnectionString='<%$ ConnectionStrings:OverlookConnectionStringY %>' SelectCommand="SELECT DISTINCT [Titulo], [Imagen], [Descripcion], [Fecha], [Autor], [Fuente] FROM [Noticia] WHERE ([Imagen] = @Imagen)">
         <SelectParameters>
-            <asp:QueryStringParameter QueryStringField="nid" Name="ID_Noticia" Type="Int32"></asp:QueryStringParameter>
+            <asp:QueryStringParameter QueryStringField="nid" DefaultValue="id" Name="ID_Noticia" Type="Int32"></asp:QueryStringParameter>
         </SelectParameters>
     </asp:SqlDataSource>
 </asp:Content>

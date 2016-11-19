@@ -53,18 +53,15 @@
         </header>
 <div id="contenedor">
         
-            <asp:DataList RepeatColumns="1" ID="DataList1" runat="server" DataSourceID="Nover">
-                <ItemTemplate>  
-                   <section id="noticia">                  
-                  <img class="image" src="<%# Eval("Imagen") %>"/>
-                    <h1><a href="VerNoticiasOverlook.aspx?nid=<%# Eval("ID_Noticia") %>" /><%# Eval("Titulo") %>"/></a></h1>
+    <asp:DataList RepeatColumns="1" ID="DataList1" runat="server" DataSourceID="NVO">
+        <ItemTemplate>
+           <img class="image" src="<%# Eval("Imagen") %>"/>
+                    <h1><a href="VerNoticiasOverlook.aspx?id=<%# Eval("ID_Noticia") %>" /><%# Eval("Titulo") %>"/></a></h1>
                    <p><%# Eval("Sinopsis") %></p>
-                   <h3>Fecha: <%# Eval("Fecha") %></h3>
+                   <h3>Fecha: <%# Eval("Fecha") %></h3> 
                    <h3>Autor: <%# Eval("Autor") %></h3>
-                     </section>
-                </ItemTemplate>
-            </asp:DataList>
-            <asp:SqlDataSource runat="server" ID="Nover" ConnectionString='<%$ ConnectionStrings:OverlookConnectionStringY %>' SelectCommand="SELECT [Titulo], [Imagen], [Sinopsis], [Fecha], [Autor] FROM [Noticia] ORDER BY [Fecha] DESC"></asp:SqlDataSource>
-       
-    </div>
+        </ItemTemplate>
+    </asp:DataList>
+    <asp:SqlDataSource runat="server" ID="NVO" ConnectionString='<%$ ConnectionStrings:OverlookConnectionStringY %>' SelectCommand="SELECT [Titulo], [Sinopsis], [Imagen], [Fecha], [Autor] FROM [Noticia] ORDER BY [Fecha] DESC"></asp:SqlDataSource>
+</div>
 </asp:Content>
