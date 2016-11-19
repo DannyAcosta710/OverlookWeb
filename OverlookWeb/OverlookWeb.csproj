@@ -58,6 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\asanoha-400px.png" />
     <Content Include="Assets\idle-video-Ana.mp4" />
     <Content Include="Assets\idle-video-Bastion.mp4" />
     <Content Include="Assets\idle-video-Dva.mp4" />
