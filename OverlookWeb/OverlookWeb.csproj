@@ -83,7 +83,7 @@
     <Content Include="Assets\idle-video-Zenyatta.mp4" />
     <Content Include="Estrategias.aspx" />
     <Content Include="Mapas.aspx" />
-    <Content Include="NoticiasOverlook.aspx" />
+    <Content Include="Noticias.aspx" />
     <Content Include="Overlook.Master" />
     <Content Include="big_noodle_titling_oblique.ttf" />
     <None Include="Web.Debug.config">
@@ -124,12 +124,12 @@
     <Compile Include="Mapas.aspx.designer.cs">
       <DependentUpon>Mapas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="NoticiasOverlook.aspx.cs">
-      <DependentUpon>NoticiasOverlook.aspx</DependentUpon>
+    <Compile Include="Noticias.aspx.cs">
+      <DependentUpon>Noticias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="NoticiasOverlook.aspx.designer.cs">
-      <DependentUpon>NoticiasOverlook.aspx</DependentUpon>
+    <Compile Include="Noticias.aspx.designer.cs">
+      <DependentUpon>Noticias.aspx</DependentUpon>
     </Compile>
     <Compile Include="Overlook.Master.cs">
       <DependentUpon>Overlook.Master</DependentUpon>

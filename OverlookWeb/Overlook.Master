@@ -110,7 +110,7 @@
                 <h1 class="menuOP"><a href="default.aspx">HÉROES</a></h1>
                 <h1 class="menuOP"><a href="Mapas.aspx">MAPAS</a></h1>
                 <h1 class="menuOP"><a href="Estrategias.aspx">ESTRATEGIAS</a></h1>
-                <h1 class="menuOP"><a href="NoticiasOverlook.aspx">NOTICIAS</a></h1>
+                <h1 class="menuOP"><a href="Noticias.aspx">NOTICIAS</a></h1>
             </nav>
         </aside>
         <div id="cph">

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="NoticiasOverlook.aspx.cs" Inherits="OverlookWeb.NoticiasOverlook" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="Noticias.aspx.cs" Inherits="OverlookWeb.NoticiasOverlook" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
