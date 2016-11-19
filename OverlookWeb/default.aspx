@@ -4,14 +4,17 @@
     <style>
         #contenedorDefault{
             background-image: url(http://www.hdwallpaper.nu/wp-content/uploads/2016/05/u7GYupt.png );
-            background-size: 152vh 100vh;
+            background-size: 100% ;
             background-repeat:no-repeat;
-            min-width:100vh;
-            height:98vh;
+            height:100%;
+            width:100%;
+            margin:0 auto;
         }
         #heroes{
-            min-width:100vh;
-            min-height:80vh;
+            width:100%;
+            min-width:100%;
+            margin:0 auto;
+            text-align:center;
         }
         .imgAtributo{
             width:100px;
@@ -29,18 +32,25 @@
             background-color: #FCBD49;
         }
         .imagenCss{
-            height:250px;
+            width:155px;
+            height:225px;
         }
         .contenidoHeroes{
             display:block;
             text-align:center;
             margin:0 auto;
+            font-size:20px;
         }
         .izi{
             margin:0 auto;
 
         }
         .izi td{
+            text-align:center;
+        }
+        #contenedorAtributos{
+            display:inline-block;
+            margin:0 auto;
             text-align:center;
         }
     </style>
@@ -84,23 +94,24 @@
     <div id="contenedorDefault">
         <header class="headMenu">Heroes</header>
         <div id="heroes">
-            <div class="atributos">
-                <button data-datalistid="ataque" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-attack-large.png" />
-                <p>Ataque</p></button>
+            <div id="contenedorAtributos">
+                <div class="atributos">
+                    <button data-datalistid="ataque" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-attack-large.png" />
+                    <p>Ataque</p></button>
+                </div>
+                <div class="atributos">
+                    <button data-datalistid="defensa" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-defense-large.png" />
+                    <p>Defensa</p></button>
+                </div>
+                <div class="atributos">
+                    <button data-datalistid="tank" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-tank-large.png" />
+                    <p>Tank</p></button>
+                </div>
+                <div class="atributos">
+                    <button data-datalistid="healer" class="Mbutton"><img class="imgAtributo" src="http://www.overwatchgg.com/wp-content/uploads/2016/06/flip-support-large.png" />
+                    <p>Healer</p></button>
+                </div>
             </div>
-            <div class="atributos">
-                <button data-datalistid="defensa" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-defense-large.png" />
-                <p>Defensa</p></button>
-            </div>
-            <div class="atributos">
-                <button data-datalistid="tank" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-tank-large.png" />
-                <p>Tank</p></button>
-            </div>
-            <div class="atributos">
-                <button data-datalistid="healer" class="Mbutton"><img class="imgAtributo" src="http://www.overwatchgg.com/wp-content/uploads/2016/06/flip-support-large.png" />
-                <p>Healer</p></button>
-            </div>
-
             <div class="contenidoHeroes">
             <asp:DataList RepeatColumns="7" CssClass="izi" ClientIDMode="Static" ID="ataque" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsAtaque">
                     <ItemTemplate>
