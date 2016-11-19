@@ -102,7 +102,7 @@
             </div>
 
             <div class="contenidoHeroes">
-            <asp:DataList RepeatColumns="7"  ClientIDMode="Static" ID="ataque" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsAtaque">
+            <asp:DataList RepeatColumns="7" CssClass="izi" ClientIDMode="Static" ID="ataque" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsAtaque">
                     <ItemTemplate>
                         <a href="Ver_Heroe.aspx?id=<%#Eval("ID_Heroe") %>"><img class="imagenCss" src="<%#Eval ("Imagen") %>" /></a><br />
                         <p><%# Eval("Nombre") %></p><br />
