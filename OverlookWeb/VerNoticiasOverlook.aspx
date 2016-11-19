@@ -2,15 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:DataList ID="DataList1" runat="server" DataSourceID="OverlookVN">
+    <asp:DataList ID="DataList1" runat="server" DataSourceID="NVO">
 
         <ItemTemplate>
             Titulo:
             <h1><%# Eval("Titulo") %></h1>
-            Sinopsis:
-            <p><%# Eval("Sinopsis") %></p>
             Imagen:
-            <img src="<%# Eval("Imagen") %>" />
+            <img src="<%# Eval("Imagen") %>"/>
             Descripcion:
             <p><%# Eval("Descripcion") %></p>
             Fecha:
@@ -18,14 +16,13 @@
             Autor:
             <h3><%# Eval("Autor") %></h3>
             Fuente:
-            <h3><%# Eval("Fuente") %></h3>
-       
+            <a href="<%# Eval("Fuente") %>"/>AQUI</a>
         </ItemTemplate>
     </asp:DataList>
 
-    <asp:SqlDataSource runat="server" ID="OverlookVN" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT [Titulo], [Sinopsis], [Imagen], [Descripcion], [Fecha], [Autor], [Fuente] FROM [Noticia] WHERE ([Imagen] = @Imagen)">
+    <asp:SqlDataSource runat="server" ID="NVO" ConnectionString='<%$ ConnectionStrings:OverlookConnectionStringY %>' SelectCommand="SELECT DISTINCT [Titulo], [Imagen], [Descripcion], [Fecha], [Autor], [Fuente] FROM [Noticia] WHERE ([Imagen] = @Imagen)">
         <SelectParameters>
-            <asp:QueryStringParameter QueryStringField="nid" DefaultValue="id" Name="Imagen" Type="String"></asp:QueryStringParameter>
+            <asp:QueryStringParameter QueryStringField="nid" DefaultValue="id" Name="ID_Noticia" Type="Int32"></asp:QueryStringParameter>
         </SelectParameters>
     </asp:SqlDataSource>
 </asp:Content>

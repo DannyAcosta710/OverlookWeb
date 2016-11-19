@@ -9,12 +9,26 @@
             text-align:center;
             font-size:48px;
             padding:0.55%;
+<<<<<<< HEAD
         }
         #contenidoHeroe{
             position:absolute;
             margin-left:20px;
             width:40%;
             font-family:'Segoe UI';
+=======
+            }
+        #contenidoHeroe {
+            position: absolute;
+            margin-left: 20px;
+            width: 40%;
+            font-family: 'Segoe UI';
+        }
+        #todo{
+            float:right;
+            width:100%;
+            overflow:scroll;
+>>>>>>> origin/master
         }
         #contenidoHeroe > h1{
             font-size:50px;
@@ -30,6 +44,7 @@
             height: 100%;
             display: block;
             float: right;
+            
         }
     </style>
 </asp:Content>
@@ -43,19 +58,28 @@
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID_Heroe" DataSourceID="SqlDataSource1">
         
         <ItemTemplate>
-            <div id="fondoHeroe">
-                <video id="videoHeroe" loop src="<%#Eval("Video") %>"   autoplay/>
+            <div id="todo">
+                <div id="fondoHeroe">
+                    
+                    <div id="contenidoHeroe">
+                        <h1><%# Eval("Nombre") %></h1>
+                        <p><%#Eval("Descripcion") %></p>
+                        <h2>Counters</h2>
+                        <asp:AdRotator width="60px" ID="AdRotator1" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
+                        <asp:AdRotator width="60px" ID="AdRotator2" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
+                        <asp:AdRotator width="60px" ID="AdRotator3" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
+                        <h2>Eficaz contra </h2>
+                        <asp:AdRotator width="60px" ID="AdRotator4" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
+                        <asp:AdRotator width="60px" ID="AdRotator5" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
+                        <asp:AdRotator width="60px" ID="AdRotator6" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
+                        <h2>Rol</h2>
+                        <p><%# Eval("Rol") %></p>
+                    </div>
+                    <video id="videoHeroe" loop src="<%#Eval("Video") %>"   autoplay/>
+                </div>
             </div>
-            <div id="contenidoHeroe">
-                <h1><%# Eval("Nombre") %></h1>
-                <p><%#Eval("Descripcion") %></p>
-                <h2>Counters</h2>
-                <p>Aqui van los counters xdxdxd</p>
-                <h2>Eficaz contra </h2>
-                <p>Aqui van los eficazes xdxd</p>
-                <h2>Rol</h2>
-                <p><%# Eval("Rol") %></p>
-            </div>
+            
+            
 
         </ItemTemplate>
     </asp:FormView>

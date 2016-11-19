@@ -1,36 +1,67 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="NoticiasOverlook.aspx.cs" Inherits="OverlookWeb.NoticiasOverlook" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-     #not{
-      width:80%;
-      margin-left:20px;
-      margin-right:20px;
+       #noticia{
+         text-align:center;
+         margin:20px;
+         height:300px;
+         padding-right:11px;
+         display:block;
+         box-shadow: 3px 3px 5px #000000 ;
 
-     }
+       }
+     
+       #contenedor{
+           margin:0;
+       }
+       .image{
+           width:50%;
+           height:100%;
+           float:left;
+           margin-right:15px;
+}
+       }
+       .image:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    margin-right:20px;
+    padding-right:10px;
+}
+       #noticia h1{
+           font-size:28px;
+           text-align:center;
+       }
+       #noticia p{
+           font-size:21px;
+           text-align:justify;
+       }
+       #noticia h3{
+           font-size:22px;
+           text-align:justify;
+       }
+
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <header class="headMenu">
-        <h1>NOTICIAS</h1>
-           </header>
-   <div id="cont">
-     <section id="not">
-         <asp:DataList ID="DataList1" runat="server" DataSourceID="overlookN">
-             <ItemTemplate>
-               <div id="d1"><a href="VerNoticiasOverlook.aspx?nid=<%#Eval("id")%>"><img src="<%# Eval("Imagen") %>"/></a></div>
-                 <div id="d2">
-                <h1> <%# Eval("Titulo") %></h1>
-                <p><%# Eval("Descripcion") %></p>
-                 </div>
-             </ItemTemplate>
-         </asp:DataList>
-         <asp:SqlDataSource runat="server" ID="overlookN" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=Overlook;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Titulo], [Imagen], [Descripcion] FROM [Noticia] WHERE ([Imagen] = @Imagen) ORDER BY [Fecha] DESC">
-             <SelectParameters>
-                 <asp:QueryStringParameter QueryStringField="nid" DefaultValue="id" Name="Imagen" Type="String"></asp:QueryStringParameter>
-             </SelectParameters>
-         </asp:SqlDataSource>
-         <asp:SqlDataSource runat="server" ID="Overlook"></asp:SqlDataSource>
-     </section>
+  
+        <header class="headMenu">
+            Noticias
+        </header>
+<div id="contenedor">
+        
+    <asp:DataList RepeatColumns="1" ID="DataList1" runat="server" DataSourceID="NVO">
+        <ItemTemplate>
+           <img class="image" src="<%# Eval("Imagen") %>"/>
+                    <h1><a href="VerNoticiasOverlook.aspx?id=<%# Eval("ID_Noticia") %>" /><%# Eval("Titulo") %>"/></a></h1>
+                   <p><%# Eval("Sinopsis") %></p>
+                   <h3>Fecha: <%# Eval("Fecha") %></h3> 
+                   <h3>Autor: <%# Eval("Autor") %></h3>
+        </ItemTemplate>
+    </asp:DataList>
+    <asp:SqlDataSource runat="server" ID="NVO" ConnectionString='<%$ ConnectionStrings:OverlookConnectionStringY %>' SelectCommand="SELECT [Titulo], [Sinopsis], [Imagen], [Fecha], [Autor] FROM [Noticia] ORDER BY [Fecha] DESC"></asp:SqlDataSource>
 </div>
-     
 </asp:Content>
