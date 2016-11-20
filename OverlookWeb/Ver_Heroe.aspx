@@ -10,12 +10,15 @@
             font-size:48px;
             padding:0.55%;
         }
+<<<<<<< HEAD
         #contenidoHeroe{
             position:absolute;
             margin-left:20px;
             width:40%;
             font-family:'Segoe UI';
             }
+=======
+>>>>>>> ed66cccc6f6ddd0e844fdaec6266d504484157e2
         #contenidoHeroe {
             position: absolute;
             margin-left: 20px;
@@ -37,10 +40,18 @@
             font-size:22px;
         }
         #videoHeroe {
-            width: 100%;
-            height: 100%;
+            position:fixed;
+            width:85%;
+            min-height: 97%;
+            top:50%;
+            left:50%;
+            transform:translateX(-41%) translateY(-37%);
+            z-index:-1;
             display: block;
             float: right;
+        }
+        #fondoHeroe{
+            width:100%;
         }
     </style>
 </asp:Content>
@@ -48,15 +59,11 @@
     <header class="headMenu">
         Heroes   
     </header>
-    
-    
-
+  
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID_Heroe" DataSourceID="SqlDataSource1">
         
         <ItemTemplate>
-            <div id="todo">
                 <div id="fondoHeroe">
-                    
                     <div id="contenidoHeroe">
                         <h1><%# Eval("Nombre") %></h1>
                         <p><%#Eval("Descripcion") %></p>
@@ -70,12 +77,12 @@
                         <asp:AdRotator width="60px" ID="AdRotator6" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
                         <h2>Rol</h2>
                         <p><%# Eval("Rol") %></p>
+                    <video id="videoHeroe" loop src="<%#Eval("Video") %>"   autoplay="autoplay"/>
+                        
                     </div>
-                    <video id="videoHeroe" loop src="<%#Eval("Video") %>"   autoplay/>
+                    
+                    
                 </div>
-            </div>
-            
-            
 
         </ItemTemplate>
     </asp:FormView>
