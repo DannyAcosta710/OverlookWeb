@@ -1,13 +1,11 @@
-﻿<%@ Page Title="Overlook - Héroes" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="OverlookWeb._default" %>
+<%@ Page Title="Overlook - Héroes" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="OverlookWeb._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    
     <style>
-        #cph{
+        #contenedorDefault{
             background-image: url(http://www.hdwallpaper.nu/wp-content/uploads/2016/05/u7GYupt.png );
             background-size: 100% ;
             background-repeat:no-repeat;
-<<<<<<< HEAD
-=======
             height:100%;
             width:100%;
             margin:0 auto;
@@ -17,7 +15,6 @@
             min-width:100%;
             margin:0 auto;
             text-align:center;
->>>>>>> ed66cccc6f6ddd0e844fdaec6266d504484157e2
         }
         .imgAtributo{
             width:100px;
@@ -46,7 +43,6 @@
         }
         .izi{
             margin:0 auto;
-
         }
         .izi td{
             text-align:center;
@@ -63,19 +59,15 @@
       $(function () {
           // run the currently selected effect
           function runEffect(datalist) {
-
               var options = {};
-
               $("#" + datalist).show("fade", options, 500, callback);
           };
-
           //callback function to bring a hidden box back
           function callback() {
               setTimeout(function () {
                   $("#effect:visible")
               }, 0);
           };
-
           // Set effect from select menu value
           $(".Mbutton").on("click", function (e) {
               e.preventDefault();
@@ -85,29 +77,13 @@
                   $('#'+datalist).hide();
               });
           });
-
-
           $("#ataque, #defensa, #tank, #healer").hide();
       });
-
-
   </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id="contenedorDefault">
         <header class="headMenu">Heroes</header>
-<<<<<<< HEAD
-            <div class="atributos">
-                <button data-datalistid="ataque" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-attack-large.png" />
-                <p>Ataque</p></button>
-            </div>
-            <div class="atributos">
-                <button data-datalistid="defensa" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-defense-large.png" />
-                <p>Defensa</p></button>
-            </div>
-            <div class="atributos">
-                <button data-datalistid="tank" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-tank-large.png" />
-                <p>Tank</p></button>
-=======
         <div id="heroes">
             <div id="contenedorAtributos">
                 <div class="atributos">
@@ -126,10 +102,9 @@
                     <button data-datalistid="healer" class="Mbutton"><img class="imgAtributo" src="http://www.overwatchgg.com/wp-content/uploads/2016/06/flip-support-large.png" />
                     <p>Healer</p></button>
                 </div>
->>>>>>> ed66cccc6f6ddd0e844fdaec6266d504484157e2
             </div>
             <div class="contenidoHeroes">
-            <asp:DataList RepeatColumns="7"  ClientIDMode="Static" ID="ataque" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsAtaque">
+            <asp:DataList RepeatColumns="7" CssClass="izi" ClientIDMode="Static" ID="ataque" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsAtaque">
                     <ItemTemplate>
                         <a href="Ver_Heroe.aspx?id=<%#Eval("ID_Heroe") %>"><img class="imagenCss" src="<%#Eval ("Imagen") %>" /></a><br />
                         <p><%# Eval("Nombre") %></p><br />
@@ -178,4 +153,6 @@
                         <asp:QueryStringParameter QueryStringField="Rol" DefaultValue="Ataque" Name="Rol" Type="String"></asp:QueryStringParameter>
                     </SelectParameters>
                 </asp:SqlDataSource>
+        </div>
+    </div>
 </asp:Content>
