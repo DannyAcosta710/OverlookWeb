@@ -20,13 +20,12 @@
             text-align:center;
             font-size:4em;
             padding:0.2em;
-            }
+        }
         body{
             font-family:BigNoodle,'Segoe UI',Arial,sans-serif;
             max-height:98vh;
             margin:0 auto;
         }
-
         #menuTop {
             font-size: 2.5rem;
             margin: 15px 0px 20px 0px;
