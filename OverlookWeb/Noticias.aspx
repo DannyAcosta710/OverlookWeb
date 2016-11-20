@@ -58,7 +58,7 @@
     <asp:DataList RepeatColumns="1" ID="DataList1" runat="server" DataSourceID="NVO">
         <ItemTemplate>
             <img class="image" src="<%# Eval("Imagen") %>"/>
-                <h1><a href="VerNoticiasOverlook.aspx?id=<%# Eval("ID_Noticia") %>" /><%# Eval("Titulo") %>"</a></h1>
+                <h1><a href="ver_noticias.aspx?id=<%# Eval("ID_Noticia") %>" /><%# Eval("Titulo") %></a></h1>
                 <p><%# Eval("Sinopsis") %></p>
                 <h3>Fecha: <%# Eval("Fecha") %></h3> 
                 <h3>Autor: <%# Eval("Autor") %></h3>

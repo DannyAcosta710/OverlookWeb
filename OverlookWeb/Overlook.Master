@@ -32,16 +32,7 @@
             margin: 15px 0px 20px 0px;
             padding: 0px 0px 10px 0px;
         }
-     /* .container { 
-          display: table;
-        }
-        .content { 
-          display: table-row; 
-          height: 100%; 
-        }
-        .content-body { 
-          display: table-cell;
-        } */
+
         #menu{
             display:table-row;
             height:99.8%;
@@ -50,20 +41,18 @@
             text-align: center;
             padding: 0px 5px 0px 5px;
             background-color: #FCBD49;
-            /*height:100%;*/
             position:absolute;
-            /*border: solid rgb(254, 130, 34) 1.5px; legacy*/
         }
         #cph{
-            min-width:84.5%;
-            max-width:84.5%;
+            min-width:84.4%;
+            max-width:84.4%;
             display:block;
             float:right;
             margin: 0 auto;
             min-height:99.8%;
             max-height:99.8%;
             position:absolute;
-            margin-left:15.5%;
+            margin-left:15.6%;
             overflow:auto;
         }
         #menu a:link{
@@ -118,7 +107,7 @@
 <body>
     <form id="form1" runat="server">
         <aside id="menu">
-            <a href="default.aspx"><p id="menuTop"><img src="http://i.imgur.com/YZ4w2ey.png" width="15%"/>&nbsp Overlook</p></a>
+            <a href="default.aspx"><p id="menuTop"><img src="http://i.imgur.com/YZ4w2ey.png" width="30"/>&nbsp Overlook</p></a>
             <nav>
                 <h1 class="menuOP"><a href="default.aspx">HÉROES</a></h1>
                 <h1 class="menuOP"><a href="Mapas.aspx">MAPAS</a></h1>

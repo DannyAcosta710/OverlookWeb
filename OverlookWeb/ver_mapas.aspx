@@ -18,13 +18,12 @@
                     background-image:url("<%# Eval("Imagen") %>");
                     background-size: cover;
                     display:block;
-
-                      filter: blur(5px);
-                      -webkit-filter: blur(5px);
-                      height: 800px;
-                      left: 0;
-                      right: 0;
-                      z-index: 1;
+                    filter: blur(5px);
+                    -webkit-filter: blur(5px);
+                    height: 800px;
+                    left: 0;
+                    right: 0;
+                    z-index: 1;
                 }
                 #centro{
                     z-index: 2;
@@ -47,10 +46,10 @@
                     width: 50%; 
                 }
                 #imagen{
-                    margin-left: 50%;
+                    margin-left: 51%;
+                    margin-top: 5%;
                     max-width: 500px;
-                    max-height; 500px;
-
+                    height: 500px;
                 }
             </style>
             
@@ -59,7 +58,7 @@
             <div id="centro">
                 <h1><%#Eval("Nombre") %></h1>
                 <div id="descripcion"><%# Eval("Descripcion") %></div>
-                <div id="imagen"> <img src="<%# Eval("imagen")%>" /> </div>
+                <div id="imagen"> <img width="100%" src="<%# Eval("imagen")%>" /> </div>
                 Tipo:
                 <asp:Label Text='<%# Bind("Tipo") %>' runat="server" ID="TipoLabel" /><br />
 

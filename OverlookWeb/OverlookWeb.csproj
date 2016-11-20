@@ -98,7 +98,7 @@
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="ProContraHeroes.xml" />
-    <Content Include="VerNoticiasOverlook.aspx" />
+    <Content Include="ver_noticias.aspx" />
     <Content Include="Ver_Heroe.aspx" />
     <Content Include="ver_mapas.aspx" />
     <Content Include="Web.config" />
@@ -143,12 +143,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VerNoticiasOverlook.aspx.cs">
-      <DependentUpon>VerNoticiasOverlook.aspx</DependentUpon>
+    <Compile Include="ver_noticias.aspx.cs">
+      <DependentUpon>ver_noticias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="VerNoticiasOverlook.aspx.designer.cs">
-      <DependentUpon>VerNoticiasOverlook.aspx</DependentUpon>
+    <Compile Include="ver_noticias.aspx.designer.cs">
+      <DependentUpon>ver_noticias.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ver_Heroe.aspx.cs">
       <DependentUpon>Ver_Heroe.aspx</DependentUpon>
