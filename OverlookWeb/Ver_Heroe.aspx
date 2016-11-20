@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="Ver_Heroe.aspx.cs" Inherits="OverlookWeb.Ver_Heroe" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="Ver_Heroe.aspx.cs" Inherits="OverlookWeb.Ver_Heroe" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         header{
@@ -10,15 +10,6 @@
             font-size:48px;
             padding:0.55%;
         }
-<<<<<<< HEAD
-        #contenidoHeroe{
-            position:absolute;
-            margin-left:20px;
-            width:40%;
-            font-family:'Segoe UI';
-            }
-=======
->>>>>>> ed66cccc6f6ddd0e844fdaec6266d504484157e2
         #contenidoHeroe {
             position: absolute;
             margin-left: 20px;
@@ -49,6 +40,7 @@
             z-index:-1;
             display: block;
             float: right;
+            
         }
         #fondoHeroe{
             width:100%;
