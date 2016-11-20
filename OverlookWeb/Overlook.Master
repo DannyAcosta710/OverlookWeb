@@ -105,6 +105,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        
+        <div id="cph">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
         <aside id="menu">
             <a href="default.aspx"><p id="menuTop"><img src="http://i.imgur.com/YZ4w2ey.png" width="30"/>&nbsp Overlook</p></a>
             <nav>
@@ -114,10 +119,6 @@
                 <h1 class="menuOP"><a href="Noticias.aspx">NOTICIAS</a></h1>
             </nav>
         </aside>
-        <div id="cph">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
     </form>
 </body>
 </html>

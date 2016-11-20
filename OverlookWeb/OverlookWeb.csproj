@@ -98,6 +98,7 @@
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="ProContraHeroes.xml" />
+    <Content Include="ver_estrategia.aspx" />
     <Content Include="ver_noticias.aspx" />
     <Content Include="Ver_Heroe.aspx" />
     <Content Include="ver_mapas.aspx" />
@@ -143,6 +144,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ver_estrategia.aspx.cs">
+      <DependentUpon>ver_estrategia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ver_estrategia.aspx.designer.cs">
+      <DependentUpon>ver_estrategia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ver_noticias.aspx.cs">
       <DependentUpon>ver_noticias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
