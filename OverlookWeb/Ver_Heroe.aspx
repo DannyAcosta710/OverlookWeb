@@ -46,30 +46,31 @@
         
         <ItemTemplate >
             <style>
-                video, header#headHeroes{
+                video{
                     clear:both;
                     position:fixed;
                     width:86.5%;
                     min-height: 100%;
                     top:50%;
                     left:53%;
-                    transform:translateX(-43%) translateY(-37.6%);
+                    transform:translateX(-44%) translateY(-37.8%);
                     z-index:-2;
                     display: block;
                     float: right;
                 }
                 header#headHeroes{
+                    font-family: BigNoodle;
                     background-color: #FCBD49;
-                    max-height:1em;
+                    width:82%;
+                    height:12.6%;
                     margin:0;
-                    font-size:4em;
-                    padding:0.2em;
                     text-align:center;
-                    font-family:BigNoodle,'Segoe UI',Arial,sans-serif;
-                    margin-top: -21.2%;
-                    z-index:1;
-                    min-height:1em;
-                    margin-left:-2%;
+                    font-size:4em;
+                    padding:0.55%;
+                    position:fixed;
+                    display:block;
+                    margin-left:-1.5%;
+                    margin-top:-1px;
                 }
                 #contHeroe{
                     margin-left:2%;
@@ -83,7 +84,7 @@
                 
                 <div id="fondoHeroe">
                     <div id="contenidoHeroe">
-                        <header id="headHeroes">Heroes</header><br />
+                        <header id="headHeroes">Héroes</header><br />
                         <video src="<%#Eval("Video") %>" loop autoplay></video>
                         <div id="contHeroe">
                             <h1><%# Eval("Nombre") %></h1>
@@ -98,7 +99,7 @@
                             <asp:AdRotator width="60px" ID="AdRotator5" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
                             <asp:AdRotator width="60px" ID="AdRotator6" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
                             <h2>Rol</h2>
-                            <p>&nbsp;<%# Eval("Rol") %></p>
+                            <p>&nbsp;<%# Eval("Rol") %></p><br />
                         </div>
                     </div>
                     
