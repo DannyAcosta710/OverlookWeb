@@ -17,6 +17,7 @@
             font-family: 'Segoe UI';
         }
         #todo{
+            
             float:right;
             width:100%;
             overflow:scroll;
@@ -30,49 +31,76 @@
         #contenidoHeroe > p{
             font-size:22px;
         }
-        #videoHeroe {
-            position:fixed;
-            width:85%;
-            min-height: 97%;
-            top:50%;
-            left:50%;
-            transform:translateX(-41%) translateY(-37%);
-            z-index:-1;
-            display: block;
-            float: right;
-            
-        }
         #fondoHeroe{
+            background-image: url("/Assets/asanoha-400px.png");
+            z-index:-1;
             width:100%;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <header class="headMenu">
-        Heroes   
-    </header>
   
+    
+
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID_Heroe" DataSourceID="SqlDataSource1">
         
-        <ItemTemplate>
+        <ItemTemplate >
+            <style>
+                video, header#headHeroes{
+                    clear:both;
+                    position:fixed;
+                    width:86.5%;
+                    min-height: 100%;
+                    top:50%;
+                    left:53%;
+                    transform:translateX(-43%) translateY(-37.6%);
+                    z-index:-2;
+                    display: block;
+                    float: right;
+                }
+                header#headHeroes{
+                    background-color: #FCBD49;
+                    max-height:1em;
+                    margin:0;
+                    font-size:4em;
+                    padding:0.2em;
+                    text-align:center;
+                    font-family:BigNoodle,'Segoe UI',Arial,sans-serif;
+                    margin-top: -21.2%;
+                    z-index:1;
+                    min-height:1em;
+                    margin-left:-2%;
+                }
+                #contHeroe{
+                    margin-left:2%;
+                    z-index:0;
+                    margin-top:22%;
+                }
+                #menu{
+                    z-index:2;
+                }
+            </style>
+                
                 <div id="fondoHeroe">
                     <div id="contenidoHeroe">
-                        <h1><%# Eval("Nombre") %></h1>
-                        <p><%#Eval("Descripcion") %></p>
-                        <h2>Counters</h2>
-                        <asp:AdRotator width="60px" ID="AdRotator1" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
-                        <asp:AdRotator width="60px" ID="AdRotator2" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
-                        <asp:AdRotator width="60px" ID="AdRotator3" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
-                        <h2>Eficaz contra </h2>
-                        <asp:AdRotator width="60px" ID="AdRotator4" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
-                        <asp:AdRotator width="60px" ID="AdRotator5" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
-                        <asp:AdRotator width="60px" ID="AdRotator6" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
-                        <h2>Rol</h2>
-                        <p><%# Eval("Rol") %></p>
-                    <video id="videoHeroe" loop src="<%#Eval("Video") %>"   autoplay="autoplay"/>
+                        <header id="headHeroes">Heroes</header><br />
+                        <video src="<%#Eval("Video") %>" loop autoplay></video>
+                        <div id="contHeroe">
+                            <h1><%# Eval("Nombre") %></h1>
+                            <p><%#Eval("Descripcion") %></p>
                         
+                            <h2>Counters</h2>
+                            <asp:AdRotator width="60px" ID="AdRotator1" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
+                            <asp:AdRotator width="60px" ID="AdRotator2" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
+                            <asp:AdRotator width="60px" ID="AdRotator3" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
+                            <h2>Eficaz contra </h2>
+                            <asp:AdRotator width="60px" ID="AdRotator4" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
+                            <asp:AdRotator width="60px" ID="AdRotator5" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
+                            <asp:AdRotator width="60px" ID="AdRotator6" runat="server" AdvertisementFile="~/ProContraHeroes.xml" />
+                            <h2>Rol</h2>
+                            <p>&nbsp;<%# Eval("Rol") %></p>
+                        </div>
                     </div>
-                    
                     
                 </div>
 

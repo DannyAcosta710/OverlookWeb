@@ -3,9 +3,8 @@
    
     <style>
         #contenedorDefault{
-            background-image: url(http://www.hdwallpaper.nu/wp-content/uploads/2016/05/u7GYupt.png );
-            background-size: 100%;
-            background-repeat :no-repeat;
+            background-image: url("/Assets/asanoha-400px.png");
+            background-repeat :repeat;
             height:100%;
             width:100%;
             margin:0 auto;
