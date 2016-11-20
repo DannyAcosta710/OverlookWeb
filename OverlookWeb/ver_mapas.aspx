@@ -38,30 +38,72 @@
                 }
                 #centro  h1{
                     font-size: 35px;
+                    border-bottom: solid black 1px;
+                }
+                #CentroIzq{
+                    float: left;
+                    width: 74%; 
                 }
                 #descripcion{
                     font-family: Arial;
                     font-size: 18px;
-                    float: left;
-                    width: 50%; 
+
+                }
+                #CuadroDer{
+                    border: solid black 1.5px;
+                    border-radius: 3.5px;
+                    margin-left: 74%;
+                    max-width: 25%;                    
                 }
                 #imagen{
-                    margin-left: 51%;
-                    margin-top: 5%;
+                    padding: 5px;
                     max-width: 500px;
-                    height: 500px;
+                    max-height: 400px;
+                }
+                #CuadroTop{
+                    border-top: none;
+                    border-bottom: solid black 1px;
+                    text-align: center;
+                    color: black;
+                    background-color: #FCBD49;
+                    margin:0;
+                }
+                .Cseccion{
+                    border-top: solid black 1px;
+                    border-bottom: solid black 1px;
+                    padding-left: 3px;
+                    text-align: center;
+                    font-size:24px;
+                    color: black;
+                    background-color: #FCBD49;
+                    margin:0;
+                }
+                #tipo{
+                    font-size: 20px;
+                    text-align: left;
+                    padding-left:7px;
+
                 }
             </style>
             
             <div class="fondo"></div>
 
             <div id="centro">
-                <h1><%#Eval("Nombre") %></h1>
-                <div id="descripcion"><%# Eval("Descripcion") %></div>
-                <div id="imagen"> <img width="100%" src="<%# Eval("imagen")%>" /> </div>
-                Tipo:
-                <asp:Label Text='<%# Bind("Tipo") %>' runat="server" ID="TipoLabel" /><br />
-
+                <div id="Centroizq">
+                    <h1><%#Eval("Nombre") %></h1>
+                    <div id="descripcion"><%# Eval("Descripcion") %></div>
+                    <h1>Estrategias</h1>
+                </div>
+                <div id="CuadroDer">
+                    <h2 id="CuadroTop"><%#Eval ("Nombre") %></h2>
+                    <div id="imagen"> 
+                        <img width="100%" src="<%# Eval("imagen")%>" />
+                    </div>
+                    <h2 class="Cseccion">Tipo</h2>
+                    <a id="tipo"><%#Eval("Tipo") %></a>
+                    <h2 class="Cseccion">Mejores Héroes</h2>
+                </div>
+                
             </div>
 
                 
