@@ -21,6 +21,7 @@
             float:right;
             width:100%;
             overflow:scroll;
+            z-index:3;
         }
         #contenidoHeroe > h1{
             font-size:50px;
