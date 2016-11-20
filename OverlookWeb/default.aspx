@@ -4,11 +4,12 @@
     <style>
         #contenedorDefault{
             background-image: url(http://www.hdwallpaper.nu/wp-content/uploads/2016/05/u7GYupt.png );
-            background-size: 100% ;
-            background-repeat:no-repeat;
+            background-size: 100%;
+            background-repeat :no-repeat;
             height:100%;
             width:100%;
             margin:0 auto;
+            position:absolute;
         }
         #heroes{
             width:100%;
