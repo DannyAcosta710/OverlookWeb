@@ -20,7 +20,7 @@
                     display:block;
                     filter: blur(5px);
                     -webkit-filter: blur(5px);
-                    height: 800px;
+                    height: 100vh;
                     left: 0;
                     right: 0;
                     z-index: 1;
@@ -99,13 +99,13 @@
                     <h2 class="Cseccion">Tipo</h2>
                     <a id="tipo"><%#Eval("Tipo") %></a>
                     <h2 class="Cseccion">Mejores Héroes</h2>
-                    <a>Ataque: </a>
+                    <a style="font-size: 18px">Ataque: </a>
                     <p id="HAtaque">
-                        <asp:FormView ID="FormView2" runat="server" DataSourceID="HeroesSource">
+                        <asp:DataList RepeatColumns="3" ID="FormView2" runat="server" DataSourceID="HeroesSource">
                             <ItemTemplate>
-                                <img src="<%#Eval("ImagenH") %>"/>
+                                <img style="margin: 0" height="100" width="55" src="<%#Eval("ImagenH") %>"/>
                             </ItemTemplate>
-                        </asp:FormView>
+                        </asp:DataList>
                     </p>
                 </div>
 
