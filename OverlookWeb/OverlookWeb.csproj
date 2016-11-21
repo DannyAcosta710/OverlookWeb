@@ -89,6 +89,7 @@
     <Content Include="Noticias.aspx" />
     <Content Include="Overlook.Master" />
     <Content Include="big_noodle_titling_oblique.ttf" />
+    <None Include="Properties\PublishProfiles\SmarterASP.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
