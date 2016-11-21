@@ -111,7 +111,7 @@
             </asp:ContentPlaceHolder>
         </div>
         <aside id="menu">
-            <a href="default.aspx"><p id="menuTop"><img src="http://i.imgur.com/YZ4w2ey.png" width="30"/>&nbsp Overlook</p></a>
+            <a href="default.aspx"><p id="menuTop"><img src="/Assets/logo.png" width="35"/>&nbsp Overlook</p></a>
             <nav>
                 <h1 class="menuOP"><a href="default.aspx">HÉROES</a></h1>
                 <h1 class="menuOP"><a href="Mapas.aspx">MAPAS</a></h1>

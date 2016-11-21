@@ -8,19 +8,20 @@
 
     <header class="headMenu">MAPAS</header>
 
-    <asp:FormView CssClass="Form" ID="FormView1" runat="server" DataKeyNames="ID_Mapa" DataSourceID="MapasSource">
+    <asp:Repeater ID="DataList1" runat="server" DataSourceID="MapasSource">
         <ItemTemplate>
            <style>
                .Form{
                    box-sizing: border-box;
                }
-                .fondo{
+
+               .fondo{
                     background-image:url("<%# Eval("Imagen") %>");
                     background-size: cover;
                     display:block;
                     filter: blur(5px);
                     -webkit-filter: blur(5px);
-                    height: 800px;
+                    min-height: 800px;
                     left: 0;
                     right: 0;
                     z-index: 1;
@@ -33,8 +34,8 @@
                     align-content: center;
                     margin: 30px 30px 30px 30px;
                     padding: 10px;
-                    position: relative;
-                    top: -800px;
+                    position: absolute;
+                    top: 15%;
                 }
                 #centro  h1{
                     font-size: 35px;
@@ -45,7 +46,6 @@
                     font-size: 18px;
                     float: left;
                     width: 74%; 
-
                 }
                 #CuadroDer{
                     border: solid black 1.5px;
@@ -80,8 +80,8 @@
                     font-size: 20px;
                     text-align: left;
                     padding-left:7px;
-
                 }
+
             </style>
             
             <div class="fondo"></div>
@@ -101,34 +101,24 @@
                     <h2 class="Cseccion">Mejores Héroes</h2>
                     <a>Ataque: </a>
                     <p id="HAtaque">
-                        <asp:FormView ID="FormView2" runat="server" DataSourceID="HeroesSource">
+                        <asp:Repeater ID="FormView2" runat="server" DataSourceID="HeroesSource">
                             <ItemTemplate>
-                                <img src="<%#Eval("ImagenH") %>"/>
+                                <img src="<%#Eval("ImagenH") %>" height="100"/>
                             </ItemTemplate>
-                        </asp:FormView>
+                        </asp:Repeater>
                     </p>
                 </div>
-
-                <h1>Estrategias</h1>
-                
             </div>
-
-                
         </ItemTemplate>
-    </asp:FormView>
-
+    </asp:Repeater>
     <asp:SqlDataSource ID="MapasSource" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT * FROM [Mapa] WHERE ([ID_Mapa] = @ID_Mapa)">
         <SelectParameters>
             <asp:QueryStringParameter QueryStringField="MID" Name="ID_Mapa" Type="Int32"></asp:QueryStringParameter>
         </SelectParameters>
     </asp:SqlDataSource>
-
     <asp:SqlDataSource ID="HeroesSource" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT * FROM [MapaXHeroeA] WHERE ([ID_Maopa] = @ID_Maopa)">
         <SelectParameters>
             <asp:QueryStringParameter QueryStringField="MID" Name="ID_Maopa" Type="Int32"></asp:QueryStringParameter>
         </SelectParameters>
     </asp:SqlDataSource>
-
-
-
 </asp:Content>

@@ -97,7 +97,9 @@
   <ItemGroup>
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="ProContraHeroes.xml" />
+    <Content Include="ProContraHeroes.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="ver_estrategia.aspx" />
     <Content Include="ver_noticias.aspx" />
     <Content Include="Ver_Heroe.aspx" />
