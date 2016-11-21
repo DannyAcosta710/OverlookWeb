@@ -32,8 +32,8 @@
             background-color: #FCBD49;
         }
         .imagenCss{
-            width:155px;
-            height:225px;
+            width:130px;
+            height:200px;
         }
         .contenidoHeroes{
             display:block;
