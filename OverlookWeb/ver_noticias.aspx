@@ -5,22 +5,25 @@
     <header class="headMenu">NOTICIAS</header>
     <asp:DataList ID="DataList1" runat="server" DataSourceID="NVO">
         <ItemTemplate>
-            <div style="float:right; text-align:center; margin:10px; margin-top:40px;">
+           
+            <aside style="margin:10px 15px; text-align:justify">
+                <h1 style="font-size:35px;display:block"><%# Eval("Titulo") %></h1>
+               <div style="display:block"> 
+                   <p style="font-size:23px;word-spacing:3px"><%# Eval("Descripcion") %></p>
+                <div style="float:left;display:block;width:800px; margin:0 15px">
                 
-                <img src="<%# Eval("Imagen") %>" width="600"/>
+                <img src="<%# Eval("Imagen") %>"  width="800" />
             </div>
-            <aside style="margin:10px; text-align:justify;">
-                <h1><%# Eval("Titulo") %></h1>
-                <p><%# Eval("Descripcion") %></p>
-                <h2>Fecha de publicación:</h2>
+               </div>
+                    <h2>Fecha de publicación:</h2>
                 <h3><%# Eval("Fecha") %></h3>
                 <h2>Autor:</h2>
                 <h3><%# Eval("Autor") %></h3>
-                <a href="<%# Eval("Fuente") %>"/>Fuente</a>
+                <a href="<%# Eval("Fuente") %>" style="font-size:20px"/>Fuente</a>
             </aside>
         </ItemTemplate>
     </asp:DataList>
-
+    <a href="Noticias.aspx" style="text-align:center; font-size:23px">REGRESAR</a>
     <asp:SqlDataSource runat="server" ID="NVO" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT * FROM [Noticia] WHERE ([ID_Noticia] = @ID_Noticia)">
         <SelectParameters>
             <asp:QueryStringParameter QueryStringField="id" Name="ID_Noticia" Type="Int32"></asp:QueryStringParameter>

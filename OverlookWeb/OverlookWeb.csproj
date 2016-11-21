@@ -82,7 +82,9 @@
     <Content Include="Assets\idle-video-Winston.mp4" />
     <Content Include="Assets\idle-video-Zarya.mp4" />
     <Content Include="Assets\idle-video-Zenyatta.mp4" />
+    <Content Include="estilos.css" />
     <Content Include="Estrategias.aspx" />
+    <Content Include="jquery.slides.js" />
     <Content Include="Mapas.aspx" />
     <Content Include="Noticias.aspx" />
     <Content Include="Overlook.Master" />
