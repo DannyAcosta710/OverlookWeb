@@ -5,7 +5,7 @@
         #contenedorDefault{
             background-image: url("/Assets/asanoha-400px.png");
             background-repeat :repeat;
-            height:100%;
+            height:123%;
             width:100%;
             margin:0 auto;
             position:absolute;
