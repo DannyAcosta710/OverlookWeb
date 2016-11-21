@@ -1,11 +1,11 @@
-<%@ Page Title="Overlook" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="OverlookWeb._default" %>
+<%@ Page Title="Overlook - Héroes" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="OverlookWeb._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    
     <style>
         #contenedorDefault{
             background-image: url("/Assets/asanoha-400px.png");
             background-repeat :repeat;
-            height:123%;
+            height:100%;
             width:100%;
             margin:0 auto;
             position:absolute;
@@ -32,8 +32,8 @@
             background-color: #FCBD49;
         }
         .imagenCss{
-            width:130px;
-            height:200px;
+            width:155px;
+            height:225px;
         }
         .contenidoHeroes{
             display:block;
