@@ -99,12 +99,16 @@
   <ItemGroup>
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="ProContraHeroes.xml" />
+    <Content Include="ProContraHeroes.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="ver_estrategia.aspx" />
     <Content Include="ver_noticias.aspx" />
     <Content Include="Ver_Heroe.aspx" />
     <Content Include="ver_mapas.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="default.aspx.cs">
