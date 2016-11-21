@@ -9,7 +9,9 @@
             padding-right:11px;
             display:block;
             box-shadow: 3px 3px 5px #000000 ;
-
+        }
+        #cph{
+            background-image: url("/Assets/asanoha-400px.png");
         }
         #contenedor{
             margin:0;
