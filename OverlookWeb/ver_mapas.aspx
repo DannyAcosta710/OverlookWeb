@@ -40,13 +40,11 @@
                     font-size: 35px;
                     border-bottom: solid black 1px;
                 }
-                #CentroIzq{
-                    float: left;
-                    width: 74%; 
-                }
                 #descripcion{
                     font-family: Arial;
                     font-size: 18px;
+                    float: left;
+                    width: 74%; 
 
                 }
                 #CuadroDer{
@@ -89,11 +87,10 @@
             <div class="fondo"></div>
 
             <div id="centro">
-                <div id="Centroizq">
-                    <h1><%#Eval("Nombre") %></h1>
-                    <div id="descripcion"><%# Eval("Descripcion") %></div>
-                    <h1>Estrategias</h1>
-                </div>
+
+                <h1><%#Eval("Nombre") %></h1>
+                <div id="descripcion"><%# Eval("Descripcion") %></div>
+                
                 <div id="CuadroDer">
                     <h2 id="CuadroTop"><%#Eval ("Nombre") %></h2>
                     <div id="imagen"> 
@@ -102,7 +99,17 @@
                     <h2 class="Cseccion">Tipo</h2>
                     <a id="tipo"><%#Eval("Tipo") %></a>
                     <h2 class="Cseccion">Mejores Héroes</h2>
+                    <a>Ataque: </a>
+                    <p id="HAtaque">
+                        <asp:FormView ID="FormView2" runat="server" DataSourceID="HeroesSource">
+                            <ItemTemplate>
+                                <img src="<%#Eval("ImagenH") %>"/>
+                            </ItemTemplate>
+                        </asp:FormView>
+                    </p>
                 </div>
+
+                <h1>Estrategias</h1>
                 
             </div>
 
@@ -115,6 +122,13 @@
             <asp:QueryStringParameter QueryStringField="MID" Name="ID_Mapa" Type="Int32"></asp:QueryStringParameter>
         </SelectParameters>
     </asp:SqlDataSource>
+
+    <asp:SqlDataSource ID="HeroesSource" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT * FROM [MapaXHeroeA] WHERE ([ID_Maopa] = @ID_Maopa)">
+        <SelectParameters>
+            <asp:QueryStringParameter QueryStringField="MID" Name="ID_Maopa" Type="Int32"></asp:QueryStringParameter>
+        </SelectParameters>
+    </asp:SqlDataSource>
+
 
 
 </asp:Content>
