@@ -14,6 +14,9 @@
             border-bottom:5px solid #000000;
             background-color:rgb(187, 183, 183);
         }
+        #cph{
+            background-image: url("/Assets/asanoha-400px.png");
+        }
         #contenedor{
             margin:0;
         }

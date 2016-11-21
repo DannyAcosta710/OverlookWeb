@@ -43,13 +43,13 @@
     </asp:SqlDataSource>
         <asp:Repeater ID="RepEst2" runat="server" DataSourceID="SqlDataSource2">
             <ItemTemplate>
-                <img src="<%#Eval("Imagen") %>" width="200" />
+                <a href="ver_mapas.aspx?mid=<%#Eval("ID_Mapa")%>"><img src="<%#Eval("Imagen") %>" width="200" /></a>
             </ItemTemplate>
         </asp:Repeater>
         <h1>Héroes:</h1>
         <asp:Repeater ID="RepHer" runat="server" DataSourceID="SqlDataSource3">
             <ItemTemplate>
-                <img src="<%#Eval("Imagen") %>" height="150" />
+                <a href="Ver_Heroe.aspx?id=<%#Eval("ID_Heroe") %>"><img src="<%#Eval("Imagen") %>" height="150" /></a>
             </ItemTemplate>
         </asp:Repeater>
     </div>
