@@ -85,7 +85,7 @@
                 
                 <div id="fondoHeroe">
                     <div id="contenidoHeroe">
-                        <header id="headHeroes">Héroes</header><br />
+                        <header id="headHeroes">Heroes</header><br />
                         <video src="<%#Eval("Video") %>" loop autoplay></video>
                         <div id="contHeroe">
                             <h1><%# Eval("Nombre") %></h1>

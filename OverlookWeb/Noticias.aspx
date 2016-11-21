@@ -56,6 +56,10 @@
         td{
             padding:10px;
         }
+        #cont{
+            height:50%;
+            width:50%;
+        }
     </style>
     <link rel="stylesheet" href="estilos.css"/>
 </asp:Content>
@@ -66,18 +70,18 @@
 
 <div id="contenedor">
       
-    <h1 id="T">LO MAS RECIENTE </h1>
+    <h1 id="T">LO MÁS RECIENTE </h1>
     <div class="main">
         <div class="slides">
             <asp:Repeater ID="Repeater1" runat="server" DataSourceID="noticiasTop">
               <ItemTemplate>
                   <div id="cont">
-                  <a style="text-decoration:none" href="ver_noticias.aspx?id=<%# Eval("ID_Noticia") %>" /><img src="<%#Eval("Imagen") %>" alt="" /></a>
-                   <div id="l">
-                       <h1><%#Eval("Titulo") %></h1>
-                      <p><%#Eval("Sinopsis") %></p>
-                      <h3>Fecha: <%#Eval("Fecha") %></h3>
-                       </div>
+                      <a style="text-decoration:none" href="ver_noticias.aspx?id=<%# Eval("ID_Noticia") %>" /><img src="<%#Eval("Imagen")%>" alt="" /></a>
+                      <div id="l">
+                          <h1><%#Eval("Titulo") %></h1>
+                          <p><%#Eval("Sinopsis") %></p>
+                          <h3>Fecha: <%#Eval("Fecha") %></h3>
+                      </div>
                   </div>
               </ItemTemplate>
                </asp:Repeater>
@@ -88,27 +92,19 @@
         <script src="jquery.slides.js"></script>
         <script>
  
-	$(function(){
-  $(".slides").slidesjs({
-    play: {
-      active: true,
-        // [boolean] Generate the play and stop buttons.
-        // You cannot use your own buttons. Sorry.
-      effect: "slide",
-        // [string] Can be either "slide" or "fade".
-      interval: 3000,
-        // [number] Time spent on each slide in milliseconds.
-      auto: true,
-        // [boolean] Start playing the slideshow on load.
-      swap: true,
-        // [boolean] show/hide stop and play buttons
-      pauseOnHover: false,
-        // [boolean] pause a playing slideshow on hover
-      restartDelay: 2500
-        // [number] restart delay on inactive slideshow
-    }
-  });
-});
+	        $(function(){
+          $(".slides").slidesjs({
+            play: {
+              active: true,
+              effect: "slide",
+              interval: 5000,
+              auto: true,
+              swap: true,
+              pauseOnHover: false,
+              restartDelay: 2500
+            }
+          });
+        });
  
 	</script>
      <h1 id="T2">+NOTICIAS</h1>

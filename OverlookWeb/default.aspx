@@ -96,11 +96,11 @@
                 </div>
                 <div class="atributos">
                     <button data-datalistid="tank" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-tank-large.png" />
-                    <p>Tank</p></button>
+                    <p>Tanque</p></button>
                 </div>
                 <div class="atributos">
                     <button data-datalistid="healer" class="Mbutton"><img class="imgAtributo" src="http://www.overwatchgg.com/wp-content/uploads/2016/06/flip-support-large.png" />
-                    <p>Healer</p></button>
+                    <p>Apoyo</p></button>
                 </div>
             </div>
             <div class="contenidoHeroes">

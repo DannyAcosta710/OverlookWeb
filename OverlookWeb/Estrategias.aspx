@@ -30,6 +30,9 @@
             font-style:normal;
             text-decoration:none;
         }
+        p{
+            font-size:0px;
+        }
     </style>
     <div class="stratStyle">
         <h1 style="text-align:center;">Haz click en cada estrategia para más información</h1>
