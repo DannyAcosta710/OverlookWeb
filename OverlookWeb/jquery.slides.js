@@ -1,4 +1,5 @@
-﻿(function () {
+﻿
+(function () {
 
     (function ($, window, document) {
         var Plugin, defaults, pluginName;

@@ -66,7 +66,7 @@
 
 <div id="contenedor">
       
-    <h1 id="T">LO MAS RECIENTE </h1>
+    <h1 id="T"> LO MAS RECIENTE </h1>
     <div class="main">
         <div class="slides">
             <asp:Repeater ID="Repeater1" runat="server" DataSourceID="noticiasTop">
