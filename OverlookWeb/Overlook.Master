@@ -8,81 +8,64 @@
     <title>Overlook</title>
 
     <style>
+        form{
+            padding-top:2%;
+            height:96.9%
+        }
         @font-face{
             font-family: BigNoodle;
             src: url(big_noodle_titling_oblique.ttf);
         }
-        header.headMenu{
-            background-color: #FCBD49;
-            width:auto;
-            height:1em;
-            margin:0;
-            text-align:center;
-            font-size:4em;
-            padding:0.2em;
+        #menu a{
+            margin-left:1.5em;
+            margin-right:1.5em;
+            color: #f2fafb;
+            text-decoration:none;
+            text-shadow: 2px 0 0 #000,-2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
         }
         body{
+            font-size:16px;
             font-family:BigNoodle,'Segoe UI',Arial,sans-serif;
-            max-height:98vh;
             margin:0 auto;
+            background-image:url(/Assets/asanoha-400px.png);
+            height:99vh;
         }
         #menuTop {
-            font-size: 2.5rem;
-            margin: 15px 0px 20px 0px;
+            font-size: 3vh;
+            margin: 15px 0px 8px 0px;
             padding: 0px 0px 10px 0px;
         }
 
         #menu{
-            display:table-row;
-            height:99.8%;
-            float: left;
-            width: 15%;
+            min-width:90%;
+            max-width:90%;
             text-align: center;
-            padding: 0px 5px 0px 5px;
+            margin:0 auto;
             background-color: #FCBD49;
-            position:absolute;
-        }
-        #cph{
-            min-width:84.4%;
-            max-width:84.4%;
-            display:block;
-            float:right;
-            margin: 0 auto;
-            min-height:99.8%;
-            max-height:99.8%;
-            position:absolute;
-            margin-left:15.6%;
+            height:30%;
             overflow:auto;
         }
-        #menu a:link{
-            color: #f2fafb;
+        #cph{
+            min-width:90%;
+            max-width:90%;
+            margin: 0 auto;
+            height:64%;
+            overflow:auto;
+            background-image:url(/Assets/paper_fibers.png);
+            border-color:darkgoldenrod;
+        }
+        nav a:link{
             font-style:normal;
-            text-decoration:none;
-            font-size: 24px;
-            text-shadow: 2px 0 0 #000,-2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+            font-size: 5vh;
         }
-        #menu a:visited{
-            color: #f2fafb;
+        nav a:visited{
             font-style:normal;
-            text-decoration:none;
-            font-size: 24px;
-            text-shadow: 2px 0 0 #000,-2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+            font-size: 6vh;
         }
-        #menu a:hover{
-            color: #f2fafb;
+        nav a:hover{
             font-style:normal;
-            text-decoration:none;
-            font-size: 40px;
-            text-shadow: 2px 0 0 #000,-2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+            font-size: 8vh;
         }
-        .menuOP{
-            padding: 17px 0px 17px 18px;
-            border: inset 5px;
-            background-color: rgb(33, 34, 38);
-            margin: 0;
-            text-align: left;
-        }
-        
         #heroes{
             clear:both;
         }
@@ -95,9 +78,7 @@
         }
         #heroesAtributos h1{
             text-align:center;
-            
         }
-
     </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -105,20 +86,20 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        
+        <aside id="menu">
+            <a id="OverLogo" href="default.aspx"><p id="menuTop"><img src="/Assets/logo.png" width="60"/>&nbsp Overlook</p></a>
+            <nav>
+                <a id="linkH" href="default.aspx">HÉROES</a>
+                <a id="linkM" href="Mapas.aspx">MAPAS</a>
+                <a id="linkE" href="Estrategias.aspx">ESTRATEGIAS</a>
+                <a id="linkN" href="Noticias.aspx">NOTICIAS</a>
+            </nav>
+        </aside>
         <div id="cph">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <aside id="menu">
-            <a href="default.aspx"><p id="menuTop"><img src="/Assets/logo.png" width="35"/>&nbsp Overlook</p></a>
-            <nav>
-                <h1 class="menuOP"><a href="default.aspx">HÉROES</a></h1>
-                <h1 class="menuOP"><a href="Mapas.aspx">MAPAS</a></h1>
-                <h1 class="menuOP"><a href="Estrategias.aspx">ESTRATEGIAS</a></h1>
-                <h1 class="menuOP"><a href="Noticias.aspx">NOTICIAS</a></h1>
-            </nav>
-        </aside>
+        
     </form>
 </body>
 </html>

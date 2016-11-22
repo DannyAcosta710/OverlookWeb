@@ -3,17 +3,16 @@
     <title>Overlook</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <header class="headMenu">ESTRATEGIAS</header>
+    <header class="headMenu"></header>
     <style>
-        #cph{
-            background-image: url("/Assets/asanoha-400px.png");
-        }
         .stratStyle{
-            min-height:80%;
+            height:80%;
             background-color: #FCBD49;
-            width:95%;
-            margin:20px;
+            width:85%;
+            margin:auto;
+            margin-top:3em;
             padding:10px;
+            overflow:auto;
         }
         a:link{
             color: blue;
@@ -36,11 +35,11 @@
     </style>
     <div class="stratStyle">
         <h1 style="text-align:center;">Haz click en cada estrategia para más información</h1>
-        <asp:DataList ID="DatEstrat" runat="server" DataSourceID="SqlDataSource1">
+        <asp:Repeater ID="RepEstrat" runat="server" DataSourceID="SqlDataSource1">
             <ItemTemplate>
-                <a href="ver_estrategia.aspx?id_strat=<%#Eval("ID_Estrategia") %>"><h2><%# Eval("Descripcion") %></h2></a>                
+                <a style="text-align:center" href="ver_estrategia.aspx?id_strat=<%#Eval("ID_Estrategia") %>"><h2><%# Eval("Descripcion") %></h2></a>                
             </ItemTemplate>
-        </asp:DataList>
+        </asp:Repeater>
     </div>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="select * from estrategia">
     </asp:SqlDataSource>

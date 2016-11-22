@@ -1,14 +1,11 @@
-<%@ Page Title="Overlook - Héroes" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="OverlookWeb._default" %>
+<%@ Page Title="Overlook" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="OverlookWeb._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    
     <style>
         #contenedorDefault{
-            background-image: url("/Assets/asanoha-400px.png");
-            background-repeat :repeat;
-            height:100%;
+            height:auto;
             width:100%;
             margin:0 auto;
-            position:absolute;
         }
         #heroes{
             width:100%;
@@ -21,7 +18,8 @@
         }
         .atributos{
             float:left;
-            padding:11.1vh;
+            padding:9em;
+            margin:auto;
         }
         button{
             border-radius:2vh;
@@ -52,6 +50,7 @@
             margin:0 auto;
             text-align:center;
         }
+        
     </style>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -83,26 +82,40 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="contenedorDefault">
-        <header class="headMenu">Heroes</header>
+        <style>
+            #menu #linkH{
+                color:red;
+            }
+        </style>
         <div id="heroes">
-            <div id="contenedorAtributos">
-                <div class="atributos">
-                    <button data-datalistid="ataque" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-attack-large.png" />
-                    <p>Ataque</p></button>
-                </div>
-                <div class="atributos">
-                    <button data-datalistid="defensa" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-defense-large.png" />
-                    <p>Defensa</p></button>
-                </div>
-                <div class="atributos">
-                    <button data-datalistid="tank" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-tank-large.png" />
-                    <p>Tanque</p></button>
-                </div>
-                <div class="atributos">
-                    <button data-datalistid="healer" class="Mbutton"><img class="imgAtributo" src="http://www.overwatchgg.com/wp-content/uploads/2016/06/flip-support-large.png" />
-                    <p>Apoyo</p></button>
-                </div>
-            </div>
+            <table id="contenedorAtributos">
+                <tb>
+                    <tr>
+                        <div class="atributos">
+                            <button data-datalistid="ataque" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-attack-large.png" />
+                            <p>Ataque</p></button>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="atributos">
+                            <button data-datalistid="defensa" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-defense-large.png" />
+                            <p>Defensa</p></button>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="atributos">
+                            <button data-datalistid="tank" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-tank-large.png" />
+                            <p>Tanque</p></button>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="atributos">
+                            <button data-datalistid="healer" class="Mbutton"><img class="imgAtributo" src="http://www.overwatchgg.com/wp-content/uploads/2016/06/flip-support-large.png" />
+                            <p>Apoyo</p></button>
+                        </div>
+                    </tr>
+                </tb>
+            </table>
             <div class="contenidoHeroes">
             <asp:DataList RepeatColumns="7" CssClass="izi" ClientIDMode="Static" ID="ataque" runat="server" DataKeyField="ID_Heroe" DataSourceID="sdsAtaque">
                     <ItemTemplate>

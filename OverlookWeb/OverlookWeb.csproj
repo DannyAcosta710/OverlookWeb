@@ -82,8 +82,12 @@
     <Content Include="Assets\idle-video-Winston.mp4" />
     <Content Include="Assets\idle-video-Zarya.mp4" />
     <Content Include="Assets\idle-video-Zenyatta.mp4" />
+    <Content Include="Assets\logo.png" />
+    <Content Include="Assets\paper_fibers.png" />
+    <Content Include="Assets\ricepaper_v3.png" />
     <Content Include="estilos.css" />
     <Content Include="Estrategias.aspx" />
+    <Content Include="favicon.ico" />
     <Content Include="jquery.slides.js" />
     <Content Include="Mapas.aspx" />
     <Content Include="Noticias.aspx" />
@@ -187,6 +191,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
