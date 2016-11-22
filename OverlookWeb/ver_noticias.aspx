@@ -7,7 +7,7 @@
         <ItemTemplate>
            
             <aside style="margin:10px 15px; text-align:justify">
-                <h1 style="font-size:35px;display:block"><%# Eval("Titulo") %></h1>
+                <h1 style="font-size:35.5px;display:block"><%# Eval("Titulo") %></h1>
                <div style="display:block"> 
                    <p style="font-size:23px;word-spacing:3px"><%# Eval("Descripcion") %></p>
                 <div style="float:left;display:block;width:800px; margin:0 15px">

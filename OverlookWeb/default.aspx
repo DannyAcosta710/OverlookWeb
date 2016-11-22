@@ -91,10 +91,12 @@
             <table id="contenedorAtributos">
                 <tb>
                     <tr>
-                        <div class="atributos">
-                            <button data-datalistid="ataque" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-attack-large.png" />
-                            <p>Ataque</p></button>
-                        </div>
+                        <td>
+                            <div class="atributos">
+                                <button data-datalistid="ataque" class="Mbutton"><img class="imgAtributo" src="http://owinfinity.com/wp-content/themes/overwatch-theme/assets/images/icons/skill-common/flip-attack-large.png" />
+                                <p>Ataque</p></button>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <div class="atributos">
