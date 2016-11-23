@@ -10,7 +10,8 @@
         }
         output{
             text-align:center;
-            font-size:1em;
+            font-size:2em;
+            margin:auto;
         }
     </style>
 </asp:Content>

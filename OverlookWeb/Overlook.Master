@@ -54,15 +54,15 @@
         }
         nav a:link{
             font-style:normal;
-            font-size: 5em;
+            font-size: 4em;
         }
         nav a:visited{
             font-style:normal;
-            font-size: 5em;
+            font-size: 4em;
         }
         nav a:hover{
             font-style:normal;
-            font-size: 7em;
+            font-size: 6em;
         }
         #heroes{
             clear:both;
@@ -77,12 +77,19 @@
         #heroesAtributos h1{
             text-align:center;
         }
+        #menu tr a{
+            margin-left: 2%;
+            margin-right: 2%;
+        }
         #menu table{
             margin:0 auto;
-            width:100%;
+            width:98%;
         }
         #menu tr{
             background-color:gold;
+        }
+        #t1, #t2, #t3{
+            width:33%;
         }
     </style>
 
@@ -99,9 +106,12 @@
                         <td><a id="linkH" href="default.aspx">HÉROES</a></td>
                         <td><a id="linkM" href="Mapas.aspx">MAPAS</a></td>
                     </tr>
+                </table>
+                <table>
                     <tr>
-                        <td><a id="linkE" href="Estrategias.aspx">ESTRATEGIAS</a></td>
-                        <td><a id="linkN" href="Noticias.aspx">NOTICIAS</a></td>
+                        <td id="t1"><a id="linkE" href="Estrategias.aspx">ESTRATEGIAS</a></td>
+                        <td id="t2"><a id="linkN" href="Noticias.aspx">NOTICIAS</a></td>
+                        <td id="t3"><a id="linkV" href="Voz.aspx">VOZ</a></td>
                     </tr>
                 </table>
             </nav>
