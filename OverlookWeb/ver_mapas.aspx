@@ -5,22 +5,20 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <header class="headMenu">MAPAS</header>
-
     <asp:Repeater ID="DataList1" runat="server" DataSourceID="MapasSource">
         <ItemTemplate>
            <style>
                .Form{
                    box-sizing: border-box;
                }
-
+               #cph{
+                   overflow:hidden;
+               }
                .fondo{
                     background-image:url("<%# Eval("Imagen") %>");
                     background-size: cover;
                     display:block;
                     filter: blur(5px);
-                    -webkit-filter: blur(5px);
                     min-height: 800px;
                     left: 0;
                     right: 0;
@@ -35,7 +33,8 @@
                     margin: 30px 30px 30px 30px;
                     padding: 10px;
                     position: absolute;
-                    top: 15%;
+                    top: 33%;
+                    width:85%;
                 }
                 #centro  h1{
                     font-size: 35px;

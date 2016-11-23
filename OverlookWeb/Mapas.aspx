@@ -11,6 +11,9 @@
         margin-left:1.5%;
         text-align:center
     }
+    table{
+        margin:0 auto;
+    }
     #cph{
         background-image: url("/Assets/asanoha-400px.png");
     }
@@ -74,9 +77,6 @@
   </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    
-        <header class="headMenu">MAPAS</header>
     <div id="total">
         <br />
         <button class="Mbutton" data-datalistid="asaltos" >Asalto</button>
