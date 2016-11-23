@@ -16,7 +16,6 @@
             width: 86%;
             max-height:59%;
             overflow:auto;
-            font-family: 'Segoe UI';
         }
         #contenidoHeroe > h1{
             font-size:50px;
@@ -25,7 +24,7 @@
             font-size:34px;
         }
         #contenidoHeroe > p{
-            font-size:22px;
+            font-size:2em;
         }
         #fondoHeroe{
             background-image: url("/Assets/asanoha-400px.png");
