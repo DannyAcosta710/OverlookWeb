@@ -14,9 +14,6 @@
     table{
         margin:0 auto;
     }
-    #cph{
-        background-image: url("/Assets/asanoha-400px.png");
-    }
     #total > h1,h2{
         color: black;
         font-size: 42px;

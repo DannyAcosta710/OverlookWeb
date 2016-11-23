@@ -60,6 +60,9 @@
             height:50%;
             width:50%;
         }
+        table{
+            margin:0 auto;
+        }
     </style>
     <link rel="stylesheet" href="estilos.css"/>
 </asp:Content>
