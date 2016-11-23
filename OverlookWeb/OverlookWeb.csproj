@@ -111,6 +111,7 @@
     <Content Include="ver_noticias.aspx" />
     <Content Include="Ver_Heroe.aspx" />
     <Content Include="ver_mapas.aspx" />
+    <Content Include="voz.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -182,6 +183,13 @@
     </Compile>
     <Compile Include="ver_mapas.aspx.designer.cs">
       <DependentUpon>ver_mapas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="voz.aspx.cs">
+      <DependentUpon>voz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="voz.aspx.designer.cs">
+      <DependentUpon>voz.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

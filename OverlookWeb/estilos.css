@@ -53,7 +53,9 @@
     font-size:50px;
 
 }
- 
+#menu #linkN{
+    color:red;
+}
 .slidesjs-pagination {
 	background:#424242;
 	list-style:none;
@@ -83,7 +85,6 @@
 .slides .active {
 	background:#FCBD49;
 }
- 
 .slidesjs-navigation{
 	background:#FCBD49;
 	color:#000000;
