@@ -5,11 +5,12 @@
 <link rel="stylesheet" href="/resources/demos/style.css"/>
 <style>
     #total{
-        min-width: 100vh;
-        min-height: 100vh;
+        width:100%;
         margin:0;
-        margin-left:1.5%;
         text-align:center
+    }
+    #menu #linkM{
+        color:red;
     }
     table{
         margin:0 auto;
@@ -24,7 +25,8 @@
         width: 150px;
     }
     button{
-        width:15%;
+        font-family:BigNoodleTitling;
+        width:60%;
         margin: 0 auto;
     }
     .Mbutton {
@@ -34,7 +36,7 @@
         color:white;
         padding: 5px;
         font-weight:bold;
-        font-size:50px;
+        font-size:5em;
         font-style:italic;
     }
 </style>

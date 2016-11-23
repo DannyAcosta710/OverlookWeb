@@ -18,7 +18,7 @@
         }
         .atributos{
             float:left;
-            padding:9em;
+            padding:3.8em;
             margin:auto;
         }
         button{
@@ -38,6 +38,8 @@
             text-align:center;
             margin:0 auto;
             font-size:20px;
+            overflow:auto;
+            max-width:100%;
         }
         .izi{
             margin:0 auto;

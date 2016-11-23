@@ -17,8 +17,6 @@
             src: url(big_noodle_titling_oblique.ttf);
         }
         #menu a{
-            margin-left:1.5em;
-            margin-right:1.5em;
             color: #f2fafb;
             text-decoration:none;
             text-shadow: 2px 0 0 #000,-2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
@@ -42,29 +40,29 @@
             text-align: center;
             margin:0 auto;
             background-color: #FCBD49;
-            height:30%;
+            height:33%;
             overflow:auto;
         }
         #cph{
             min-width:90%;
             max-width:90%;
             margin: 0 auto;
-            height:64%;
+            height:62%;
             overflow:auto;
             background-image:url(/Assets/paper_fibers.png);
             border-color:darkgoldenrod;
         }
         nav a:link{
             font-style:normal;
-            font-size: 5vh;
+            font-size: 5em;
         }
         nav a:visited{
             font-style:normal;
-            font-size: 6vh;
+            font-size: 5em;
         }
         nav a:hover{
             font-style:normal;
-            font-size: 8vh;
+            font-size: 7em;
         }
         #heroes{
             clear:both;
@@ -79,6 +77,13 @@
         #heroesAtributos h1{
             text-align:center;
         }
+        #menu table{
+            margin:0 auto;
+            width:100%;
+        }
+        #menu tr{
+            background-color:gold;
+        }
     </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -89,10 +94,16 @@
         <aside id="menu">
             <a id="OverLogo" href="default.aspx"><p id="menuTop"><img src="/Assets/logo.png" width="60"/>&nbsp Overlook</p></a>
             <nav>
-                <a id="linkH" href="default.aspx">HÉROES</a>
-                <a id="linkM" href="Mapas.aspx">MAPAS</a>
-                <a id="linkE" href="Estrategias.aspx">ESTRATEGIAS</a>
-                <a id="linkN" href="Noticias.aspx">NOTICIAS</a>
+                <table>
+                    <tr>
+                        <td><a id="linkH" href="default.aspx">HÉROES</a></td>
+                        <td><a id="linkM" href="Mapas.aspx">MAPAS</a></td>
+                    </tr>
+                    <tr>
+                        <td><a id="linkE" href="Estrategias.aspx">ESTRATEGIAS</a></td>
+                        <td><a id="linkN" href="Noticias.aspx">NOTICIAS</a></td>
+                    </tr>
+                </table>
             </nav>
         </aside>
         <div id="cph">

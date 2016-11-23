@@ -10,12 +10,12 @@
             padding-top:20px;
             display:block;
         }
+        #menu #linkN{
+            color:red;
+        }
         #noticia:hover{
             border-bottom:5px solid #000000;
             background-color:rgb(187, 183, 183);
-        }
-        #cph{
-            background-image: url("/Assets/asanoha-400px.png");
         }
         #contenedor{
             margin:0;
@@ -68,7 +68,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="contenedor">
-      
         <h1 id="T">LO MÁS RECIENTE </h1>
         <div class="main">
             <div class="slides">

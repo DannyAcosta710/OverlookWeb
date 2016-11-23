@@ -23,18 +23,21 @@
                     left: 0;
                     right: 0;
                     z-index: 1;
+                    position:inherit;
                 }
                 #centro{
                     z-index: 2;
+                    height:50%;
                     border-radius: 3px;
                     border: solid black 1.5px;
                     background: rgba(255, 255, 255, 0.70);
-                    align-content: center;
-                    margin: 30px 30px 30px 30px;
+                    margin: 3%;
                     padding: 10px;
                     position: absolute;
+                    max-height:90%;
+                    overflow:auto;
                     top: 33%;
-                    width:85%;
+                    width:82%;
                 }
                 #centro  h1{
                     font-size: 35px;
