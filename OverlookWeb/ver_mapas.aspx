@@ -109,7 +109,22 @@
                             </ItemTemplate>
                         </asp:Repeater>
                     </p>
+                    <a>Defensa: </a>
+                    <p id="HDefensa">
+                        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="HeroesDSource">
+                            <ItemTemplate>
+                                <img src="<%#Eval("ImagenH") %>" height="100" />
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </p>
                 </div>
+                <h1>Callouts</h1>
+                <p style="font-size:18px">Actualmente los "Callouts" o zonas de cada mapa se estan formando por la comunidad del juego, por lo que es probable que en algunos mapas aún no se hayan establecido los Callouts. La página con los Callouts más oficiales del juego es <a href="http://52.208.252.11/" >Kings Row</a></p>
+                <asp:DataList RepeatColumns="2" ID="Callouts" runat="server" DataSourceID="CalloutsSource">
+                    <ItemTemplate>
+                        <img style="height:300px; width:500px"  src="<%#Eval("ImagenC") %>" />
+                    </ItemTemplate>
+                </asp:DataList>
             </div>
         </ItemTemplate>
     </asp:Repeater>
@@ -121,6 +136,16 @@
     <asp:SqlDataSource ID="HeroesSource" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT * FROM [MapaXHeroeA] WHERE ([ID_Maopa] = @ID_Maopa)">
         <SelectParameters>
             <asp:QueryStringParameter QueryStringField="MID" Name="ID_Maopa" Type="Int32"></asp:QueryStringParameter>
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="HeroesDSource" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT * FROM [MapaXHeroeD] WHERE ([ID_Maopa] = @ID_Maopa)">
+        <SelectParameters>
+            <asp:QueryStringParameter QueryStringField="MID" Name="ID_Maopa" Type="Int32"></asp:QueryStringParameter>
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="CalloutsSource" runat="server" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT * FROM [MapaXCallout] WHERE ([ID_Mapa] = @ID_Mapa)">
+        <SelectParameters>
+            <asp:QueryStringParameter QueryStringField="MID" Name="ID_Mapa" Type="Int32"></asp:QueryStringParameter>
         </SelectParameters>
     </asp:SqlDataSource>
 </asp:Content>
