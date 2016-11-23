@@ -28,7 +28,6 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <header class="headMenu">ESTRATEGIAS</header>
     <div class="stratStyle">
         <asp:DataList ID="DatEstrat" runat="server" DataSourceID="SqlDataSource1">
             <ItemTemplate>

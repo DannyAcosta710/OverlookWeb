@@ -40,9 +40,6 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  
-    
-
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="ID_Heroe" DataSourceID="SqlDataSource1">
         
         <ItemTemplate >
@@ -55,7 +52,7 @@
                     top:50%;
                     left:53%;
                     transform:translateX(-44%) translateY(-37.8%);
-                    z-index:-2;
+                    z-index:1;
                     display: block;
                     float: right;
                 }
@@ -75,17 +72,15 @@
                 }
                 #contHeroe{
                     margin-left:2%;
-                    z-index:0;
+                    z-index:3;
                     margin-top:22%;
                 }
                 #menu{
                     z-index:2;
                 }
             </style>
-                
                 <div id="fondoHeroe">
                     <div id="contenidoHeroe">
-                        <header id="headHeroes">Heroes</header><br />
                         <video src="<%#Eval("Video") %>" loop autoplay></video>
                         <div id="contHeroe">
                             <h1><%# Eval("Nombre") %></h1>
