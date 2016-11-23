@@ -67,61 +67,57 @@
     <link rel="stylesheet" href="estilos.css"/>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <header class="headMenu">
-            Noticias
-        </header>
-
-<div id="contenedor">
+    <div id="contenedor">
       
-    <h1 id="T">LO MÁS RECIENTE </h1>
-    <div class="main">
-        <div class="slides">
-            <asp:Repeater ID="Repeater1" runat="server" DataSourceID="noticiasTop">
-              <ItemTemplate>
-                  <div id="cont">
-                      <a style="text-decoration:none" href="ver_noticias.aspx?id=<%# Eval("ID_Noticia") %>" /><img src="<%#Eval("Imagen")%>" alt="" /></a>
-                      <div id="l">
-                          <h1><%#Eval("Titulo") %></h1>
-                          <p><%#Eval("Sinopsis") %></p>
-                          <h3>Fecha: <%#Eval("Fecha") %></h3>
+        <h1 id="T">LO MÁS RECIENTE </h1>
+        <div class="main">
+            <div class="slides">
+                <asp:Repeater ID="Repeater1" runat="server" DataSourceID="noticiasTop">
+                  <ItemTemplate>
+                      <div id="cont">
+                          <a style="text-decoration:none" href="ver_noticias.aspx?id=<%# Eval("ID_Noticia") %>" /><img src="<%#Eval("Imagen")%>" alt="" /></a>
+                          <div id="l">
+                              <h1><%#Eval("Titulo") %></h1>
+                              <p><%#Eval("Sinopsis") %></p>
+                              <h3>Fecha: <%#Eval("Fecha") %></h3>
+                          </div>
                       </div>
-                  </div>
-              </ItemTemplate>
-               </asp:Repeater>
-            <asp:SqlDataSource runat="server" ID="noticiasTop" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT TOP (5) [ID_Noticia], [Titulo], [Sinopsis], [Imagen], [Fecha], [Autor] FROM [Noticia] ORDER BY [Fecha] DESC"></asp:SqlDataSource>
-        </div>
-	</div>
-        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-        <script src="jquery.slides.js"></script>
-        <script>
+                  </ItemTemplate>
+                   </asp:Repeater>
+                <asp:SqlDataSource runat="server" ID="noticiasTop" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT TOP (5) [ID_Noticia], [Titulo], [Sinopsis], [Imagen], [Fecha], [Autor] FROM [Noticia] ORDER BY [Fecha] DESC"></asp:SqlDataSource>
+            </div>
+	    </div>
+            <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+            <script src="jquery.slides.js"></script>
+            <script>
  
-	        $(function(){
-          $(".slides").slidesjs({
-            play: {
-              active: true,
-              effect: "slide",
-              interval: 5000,
-              auto: true,
-              swap: true,
-              pauseOnHover: false,
-              restartDelay: 2500
-            }
-          });
-        });
+	                $(function(){
+                  $(".slides").slidesjs({
+                    play: {
+                      active: true,
+                      effect: "slide",
+                      interval: 5000,
+                      auto: true,
+                      swap: true,
+                      pauseOnHover: false,
+                      restartDelay: 2500
+                    }
+                  });
+                });
  
-	</script>
-     <h1 id="T2">+NOTICIAS</h1>
-    <asp:DataList RepeatColumns="1" ID="DataList1" runat="server" DataSourceID="NVO">
-        <ItemTemplate>
-            <section id="noticia">
-            <img class="image" src="<%# Eval("Imagen") %>"/>
-                <h1><a href="ver_noticias.aspx?id=<%# Eval("ID_Noticia") %>" /><%# Eval("Titulo") %></a></h1>
-                <p><%# Eval("Sinopsis") %></p>
-                <h3>Fecha: <%# Eval("Fecha") %></h3> 
-                <h3>Autor: <%# Eval("Autor") %></h3>
+            </script>
+        <h1 id="T2">+NOTICIAS</h1>
+        <asp:DataList RepeatColumns="1" ID="DataList1" runat="server" DataSourceID="NVO">
+            <ItemTemplate>
+                <section id="noticia">
+                    <img class="image" src="<%# Eval("Imagen") %>"/>
+                    <h1><a href="ver_noticias.aspx?id=<%# Eval("ID_Noticia") %>" /><%# Eval("Titulo") %></a></h1>
+                    <p><%# Eval("Sinopsis") %></p>
+                    <h3>Fecha: <%# Eval("Fecha") %></h3> 
+                    <h3>Autor: <%# Eval("Autor") %></h3>
                 </section>
-        </ItemTemplate>
-    </asp:DataList>
-    <asp:SqlDataSource runat="server" ID="NVO" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT [ID_Noticia], [Titulo], [Sinopsis], [Imagen], [Fecha], [Autor] FROM [Noticia] ORDER BY [Fecha] DESC"></asp:SqlDataSource>
-</div>
+            </ItemTemplate>
+        </asp:DataList>
+        <asp:SqlDataSource runat="server" ID="NVO" ConnectionString='<%$ ConnectionStrings:OverlookConnectionString %>' SelectCommand="SELECT [ID_Noticia], [Titulo], [Sinopsis], [Imagen], [Fecha], [Autor] FROM [Noticia] ORDER BY [Fecha] DESC"></asp:SqlDataSource>
+    </div>
 </asp:Content>
