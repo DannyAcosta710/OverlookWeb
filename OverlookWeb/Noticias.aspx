@@ -1,17 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="Noticias.aspx.cs" Inherits="OverlookWeb.NoticiasOverlook" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-        #noticia{
-            text-align:center;
-            margin:20px 25px;
-            height:270px;
-            padding-right:11px;
-            padding-top:20px;
-            display:block;
-        }
-        #menu #linkN{
-            color:red;
+        #noticia {
+            text-align: center;
+            margin: 20px 25px;
+            height: 270px;
+            padding-right: 11px;
+            padding-top: 20px;
+            display: block;
         }
         #noticia:hover{
             border-bottom:5px solid #000000;

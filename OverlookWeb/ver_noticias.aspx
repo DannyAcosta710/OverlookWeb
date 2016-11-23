@@ -1,11 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Overlook.Master" AutoEventWireup="true" CodeBehind="ver_noticias.aspx.cs" Inherits="OverlookWeb.VerNoticiasOverlook" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        #menu #linkN{
+            color:red;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <header class="headMenu">NOTICIAS</header>
     <asp:DataList ID="DataList1" runat="server" DataSourceID="NVO">
         <ItemTemplate>
-           
             <aside style="margin:10px 15px; text-align:justify">
                 <h1 style="font-size:35.5px;display:block"><%# Eval("Titulo") %></h1>
                <div style="display:block"> 

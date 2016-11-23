@@ -24,7 +24,9 @@
         h1,h2,h3{
             text-align:left;
         }
-        
+        #menu #linkE{
+            color:red;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
