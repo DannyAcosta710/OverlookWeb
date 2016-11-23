@@ -25,6 +25,9 @@
             border-radius:2vh;
             background-color:black;
             color:white;
+            font-size:3em;
+            font-family:BigNoodle;
+            width:4em;
         }
         button:hover {
             background-color: #FCBD49;
@@ -37,7 +40,7 @@
             display:block;
             text-align:center;
             margin:0 auto;
-            font-size:20px;
+            font-size:2em;
             overflow:auto;
             max-width:100%;
         }

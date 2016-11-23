@@ -25,13 +25,13 @@
         width: 150px;
     }
     button{
-        font-family:BigNoodleTitling;
+        font-family:BigNoodle;
         width:60%;
         margin: 0 auto;
     }
     .Mbutton {
         background-color:black;
-        font-family:BigNoodleTitling;
+        font-family:BigNoodle;
         border:none;
         color:white;
         padding: 5px;
