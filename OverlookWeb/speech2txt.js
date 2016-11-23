@@ -9,7 +9,7 @@ ask(text, function (err, result) {
     } else {
         var answer = result.transcript;
         answer = answer.toLowerCase();
-        var heroes = ['genji', 'macri', 'pharah', 'reaper', 'soldado 76', 'sombra', 'tracer', 'bastión', 'hanzo', 'junkrat', 'mei', 'torbjorn', 'widowmaker', 'dva', 'reinhardt', 'roadhog', 'winston', 'zarya', 'ana', 'lucio', 'mercy', 'symmetra', 'zenyatta'];
+        var heroes = ['robot ninja', 'macri', 'para', 'emo', 'soldado 76', 'sombra', 'tracer', 'bastión', 'hanzo', 'bombitas', 'el demonio', 'toblerone', 'widowmaker', 'viva', 'reinhardt', 'cerdo', 'winston', 'saria', 'ana', 'lucio', 'merci', 'simetra', 'zenyatta'];
         var listo = include(heroes, answer);
         if (listo!=-1) {
             response = 'Quieres un counter de: '+listo;
