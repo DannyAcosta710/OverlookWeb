@@ -90,6 +90,7 @@
     <Content Include="favicon.ico" />
     <Content Include="jquery.slides.js" />
     <Content Include="Mapas.aspx" />
+    <Content Include="speech2txt.js" />
     <Content Include="Noticias.aspx" />
     <Content Include="Overlook.Master" />
     <Content Include="big_noodle_titling_oblique.ttf" />
