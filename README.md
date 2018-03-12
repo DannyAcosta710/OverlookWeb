@@ -1,9 +1,8 @@
 # OverlookWeb
-An ASP.NET Overwatch companion
+An ASP.NET Overwatch companion.
+
+Main functions are hero information, counters/picks, strategies and map information.
 :)
 
-Hosted temporarily on http://dannytalent-001-site1.itempurl.com
 
-This project will be deleted on January 1st, 2017
-
-https://www.youtube.com/watch?v=W2TE0DjdNqI
+This project was suspended on January 1st, 2017; unfinished.
